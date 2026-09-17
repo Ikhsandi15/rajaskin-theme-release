@@ -1,0 +1,57 @@
+name: Package & Release Theme
+
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: Package and Release Theme
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Extract Version from Theme style.css
+        id: get_version
+        run: |
+          VERSION=$(grep -m1 "Version:" style.css | awk '{print $NF}' | tr -d '\r')
+          if [ -z "$VERSION" ]; then
+            VERSION="1.1.1"
+          fi
+          echo "VERSION=$VERSION" >> $GITHUB_OUTPUT
+          echo "Detected version: $VERSION"
+
+      - name: Package Theme Zip
+        run: |
+          mkdir -p build/rajaskin-theme
+          rsync -av --exclude='.git' --exclude='.github' --exclude='build' --exclude='*.zip' ./ build/rajaskin-theme/
+          cd build
+          zip -r ../rajaskin-theme.zip rajaskin-theme
+          cd ..
+          ls -lh rajaskin-theme.zip
+
+      - name: Publish GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ steps.get_version.outputs.VERSION }}
+          name: Release v${{ steps.get_version.outputs.VERSION }}
+          body: |
+            Automated release for RajaSkin Luxury WooCommerce Theme v${{ steps.get_version.outputs.VERSION }}.
+            
+            ### Installation:
+            1. Download `rajaskin-theme.zip` below.
+            2. Upload via WordPress Admin: **Appearance → Themes → Add New Theme → Upload Theme**.
+            3. Future updates will be notified and installable directly with 1-click in your WordPress Dashboard!
+          draft: false
+          prerelease: false
+          files: rajaskin-theme.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

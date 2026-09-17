@@ -1,0 +1,1443 @@
+/**
+ * RajaSkin Luxury Minimalist My Account Styling
+ * Desktop & Mobile Responsive
+ */
+
+/* ==========================================================================
+   1. Page Layout & Container
+   ========================================================================== */
+.rs-myaccount-page-wrap {
+    background: #ffffff;
+    min-height: 80vh;
+    padding: 2.5rem 0 6rem;
+    box-sizing: border-box;
+}
+
+.rs-myaccount-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 24px;
+    box-sizing: border-box;
+}
+
+/* Breadcrumb */
+.rs-myaccount-breadcrumb {
+    font-size: 0.825rem;
+    color: #888888;
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.rs-myaccount-breadcrumb a {
+    color: #666666;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.rs-myaccount-breadcrumb a:hover {
+    color: #111111;
+}
+
+.rs-myaccount-breadcrumb .sep {
+    color: #cccccc;
+}
+
+.rs-myaccount-breadcrumb .current {
+    color: #111111;
+    font-weight: 500;
+}
+
+/* Page Header */
+.rs-myaccount-header {
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.rs-myaccount-title {
+    font-family: var(--font-serif, 'Playfair Display', Georgia, serif);
+    font-size: 2.3rem;
+    font-weight: 700;
+    color: #111111;
+    margin: 0 0 0.4rem 0;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+}
+
+.rs-myaccount-subtitle {
+    font-size: 0.95rem;
+    color: #666666;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* 2-Column Account Grid */
+.rs-myaccount-grid {
+    display: flex;
+    gap: 2.75rem;
+    align-items: flex-start;
+}
+
+/* ==========================================================================
+   2. Sidebar Navigation (Left Column)
+   ========================================================================== */
+.rs-myaccount-sidebar {
+    flex: 0 0 280px;
+    position: sticky;
+    top: 2rem;
+}
+
+/* User Quick Info in Sidebar */
+.rs-account-user-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 20px;
+    background: #fafaf8;
+    border: 1px solid #ebebeb;
+    border-radius: 14px;
+    margin-bottom: 1.25rem;
+}
+
+.rs-user-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #111111;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.rs-user-info {
+    min-width: 0;
+}
+
+.rs-user-name {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #111111;
+    margin: 0 0 2px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.rs-user-email {
+    font-size: 0.78rem;
+    color: #888888;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Navigation List */
+.rs-myaccount-nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    background: #ffffff;
+    border: 1px solid #ebebeb;
+    border-radius: 16px;
+    padding: 10px;
+}
+
+.rs-myaccount-nav-list li {
+    margin: 0;
+    list-style: none;
+}
+
+.rs-nav-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #444444;
+    font-size: 0.92rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.rs-nav-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #777777;
+    transition: color 0.2s ease;
+}
+
+.rs-nav-text {
+    flex: 1;
+}
+
+.rs-nav-arrow {
+    color: #bbbbbb;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.rs-nav-link:hover {
+    background: #f7f7f5;
+    color: #111111;
+}
+
+.rs-nav-link:hover .rs-nav-icon {
+    color: #111111;
+}
+
+.rs-nav-link:hover .rs-nav-arrow {
+    color: #111111;
+    transform: translateX(2px);
+}
+
+/* Active Menu Item */
+.woocommerce-MyAccount-navigation-link.is-active .rs-nav-link,
+.rs-nav-link.active {
+    background: #111111;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.woocommerce-MyAccount-navigation-link.is-active .rs-nav-icon,
+.rs-nav-link.active .rs-nav-icon {
+    color: #ffffff;
+}
+
+.woocommerce-MyAccount-navigation-link.is-active .rs-nav-arrow,
+.rs-nav-link.active .rs-nav-arrow {
+    color: #ffffff;
+}
+
+/* Logout link subtle red highlight on hover */
+.woocommerce-MyAccount-navigation-link--customer-logout .rs-nav-link:hover {
+    background: #fff5f5;
+    color: #e53e3e;
+}
+
+.woocommerce-MyAccount-navigation-link--customer-logout .rs-nav-link:hover .rs-nav-icon,
+.woocommerce-MyAccount-navigation-link--customer-logout .rs-nav-link:hover .rs-nav-arrow {
+    color: #e53e3e;
+}
+
+/* ==========================================================================
+   3. Main Content Area (Right Column)
+   ========================================================================== */
+.rs-myaccount-main-content {
+    flex: 1;
+    min-width: 0;
+    background: #ffffff;
+}
+
+/* ==========================================================================
+   4. Dashboard Tab
+   ========================================================================== */
+.rs-dashboard-welcome-banner {
+    background: linear-gradient(135deg, #faf8f5 0%, #f4f0ea 100%);
+    border: 1px solid #ebe5dc;
+    border-radius: 18px;
+    padding: 28px 32px;
+    margin-bottom: 2rem;
+}
+
+.rs-welcome-badge {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: #111111;
+    color: #ffffff;
+    padding: 4px 10px;
+    border-radius: 999px;
+    margin-bottom: 0.75rem;
+}
+
+.rs-welcome-heading {
+    font-family: var(--font-serif, 'Playfair Display', Georgia, serif);
+    font-size: 1.85rem;
+    font-weight: 700;
+    color: #111111;
+    margin: 0 0 0.5rem 0;
+    line-height: 1.25;
+}
+
+.rs-welcome-heading span {
+    color: #7b5836;
+}
+
+.rs-welcome-desc {
+    font-size: 0.92rem;
+    color: #666666;
+    margin: 0;
+    line-height: 1.55;
+    max-width: 680px;
+}
+
+/* Stats Cards Grid */
+.rs-dashboard-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-bottom: 2.5rem;
+}
+
+.rs-stat-card {
+    background: #ffffff;
+    border: 1px solid #ebebeb;
+    border-radius: 16px;
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.2s ease;
+}
+
+.rs-stat-card:hover {
+    border-color: #111111;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+}
+
+.rs-stat-icon-wrap {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    background: #fbf9f6;
+    border: 1px solid #f0eee8;
+    color: #111111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.rs-stat-number {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #111111;
+    display: block;
+    line-height: 1.2;
+    margin-bottom: 4px;
+}
+
+.rs-stat-text-val {
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: #111111;
+    display: block;
+    line-height: 1.3;
+    margin-bottom: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.rs-stat-title {
+    font-size: 0.825rem;
+    color: #777777;
+    margin: 0 0 1rem 0;
+    font-weight: 500;
+}
+
+.rs-stat-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #111111;
+    text-decoration: none;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 12px;
+    margin-top: auto;
+    transition: gap 0.2s ease;
+}
+
+.rs-stat-link:hover {
+    gap: 9px;
+}
+
+/* Quick Actions Section */
+.rs-dashboard-quick-actions {
+    background: #ffffff;
+    border: 1px solid #ebebeb;
+    border-radius: 16px;
+    padding: 24px 28px;
+}
+
+.rs-section-title {
+    font-family: var(--font-serif, 'Playfair Display', Georgia, serif);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #111111;
+    margin: 0 0 1.25rem 0;
+}
+
+.rs-actions-button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.rs-btn-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    background: #111111;
+    color: #ffffff !important;
+    text-decoration: none;
+    border-radius: 999px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.rs-btn-action:hover {
+    background: #333333;
+    transform: translateY(-1px);
+}
+
+.rs-btn-action.secondary {
+    background: #ffffff;
+    color: #111111 !important;
+    border: 1px solid #cccccc;
+}
+
+.rs-btn-action.secondary:hover {
+    border-color: #111111;
+    background: #fafaf8;
+}
+
+.rs-btn-action.logout {
+    background: #fff5f5;
+    color: #e53e3e !important;
+    border: 1px solid #fed7d7;
+}
+
+.rs-btn-action.logout:hover {
+    background: #fed7d7;
+}
+
+/* ==========================================================================
+   5. Orders Tab
+   ========================================================================== */
+.rs-myaccount-orders-wrap {
+    width: 100%;
+}
+
+.rs-orders-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.75rem;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.rs-orders-heading {
+    font-family: var(--font-serif, 'Playfair Display', Georgia, serif);
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #111111;
+    margin: 0 0 4px 0;
+}
+
+.rs-orders-subtext {
+    font-size: 0.88rem;
+    color: #777777;
+    margin: 0;
+}
+
+.rs-btn-live-track {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #faf8f5;
+    border: 1px solid #dfd8cb;
+    color: #111111;
+    padding: 9px 18px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.rs-btn-live-track:hover {
+    background: #111111;
+    color: #ffffff;
+    border-color: #111111;
+}
+
+/* Orders Table */
+.rs-orders-table-container {
+    background: #ffffff;
+    border: 1px solid #ebebeb;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.rs-luxury-orders-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+}
+
+.rs-luxury-orders-table th {
+    background: #fafaf8;
+    padding: 14px 20px;
+    text-align: left;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #666666;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.rs-luxury-orders-table td {
+    padding: 18px 20px;
+    border-bottom: 1px solid #f0f0f0;
+    vertical-align: middle;
+    font-size: 0.9rem;
+    color: #222222;
+}
+
+.rs-luxury-orders-table tr:last-child td {
+    border-bottom: none;
+}
+
+.rs-order-num-link {
+    color: #111111;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.2s ease;
+}
+
+.rs-order-num-link:hover {
+    text-decoration: underline;
+}
+
+/* Status Pills */
+.rs-status-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.rs-status-pill.status-completed {
+    background: #e6f7eb;
+    color: #1b873f;
+    border: 1px solid #c4eed0;
+}
+
+.rs-status-pill.status-processing,
+.rs-status-pill.in-transit {
+    background: #fff8eb;
+    color: #b45309;
+    border: 1px solid #fde68a;
+}
+
+.rs-status-pill.status-pending {
+    background: #f3f4f6;
+    color: #4b5563;
+    border: 1px solid #e5e7eb;
+}
+
+.rs-status-pill.status-cancelled {
+    background: #fee2e2;
+    color: #dc2626;
+    border: 1px solid #fca5a5;
+}
+
+.rs-order-total-cell {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.rs-order-price-val {
+    font-weight: 700;
+    color: #111111;
+}
+
+.rs-order-items-qty {
+    font-size: 0.78rem;
+    color: #888888;
+}
+
+.rs-order-actions-wrap {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.rs-btn-track-mini {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: #111111;
+    color: #ffffff !important;
+    text-decoration: none;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 999px;
+    transition: all 0.2s ease;
+}
+
+.rs-btn-track-mini:hover {
+    background: #333333;
+}
+
+.rs-btn-details-mini {
+    background: #ffffff !important;
+    color: #222222 !important;
+    border: 1px solid #dddddd !important;
+    font-size: 0.78rem !important;
+    font-weight: 600 !important;
+    padding: 6px 14px !important;
+    border-radius: 999px !important;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.rs-btn-details-mini:hover {
+    border-color: #111111 !important;
+    background: #fafaf8 !important;
+}
+
+/* Empty State */
+.rs-empty-orders-card {
+    background: #ffffff;
+    border: 1px solid #ebebeb;
+    border-radius: 20px;
+    padding: 3.5rem 2rem 3.75rem;
+    text-align: center;
+    max-width: 600px;
+    margin: 1.5rem auto 2.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+.rs-empty-icon-wrap {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #faf7f2 0%, #f4ede3 100%);
+    border: 1px solid #ebe2d5;
+    color: #8c7355;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem auto;
+    box-shadow: 0 8px 20px rgba(140, 115, 85, 0.08);
+}
+
+.rs-empty-title {
+    font-family: var(--font-serif, 'Playfair Display', Georgia, serif);
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #111111;
+    margin: 0 0 0.5rem 0;
+    letter-spacing: -0.3px;
+}
+
+.rs-empty-desc {
+    font-size: 0.95rem;
+    color: #666666;
+    margin: 0 auto 2rem auto;
+    line-height: 1.55;
+    max-width: 440px;
+}
+
+.rs-empty-action-wrap {
+    margin-bottom: 2rem;
+}
+
+.rs-btn-explore {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #111111;
+    color: #ffffff !important;
+    text-decoration: none;
+    font-size: 0.92rem;
+    font-weight: 600;
+    padding: 12px 28px;
+    border-radius: 999px;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+.rs-btn-explore:hover {
+    background: #2b2b2b;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    color: #ffffff !important;
+}
+
+.rs-btn-explore svg {
+    transition: transform 0.2s ease;
+}
+
+.rs-btn-explore:hover svg {
+    transform: translateX(3px);
+}
+
+.rs-empty-orders-perks {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    padding-top: 1.75rem;
+    border-top: 1px solid #f0f0f0;
+    flex-wrap: wrap;
+}
+
+.rs-order-perk {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.78rem;
+    color: #666666;
+    font-weight: 500;
+}
+
+.rs-order-perk svg {
+    color: #8c7355;
+    flex-shrink: 0;
+}
+
+/* View Order Empty / Not Found State */
+.rs-view-order-empty-wrap {
+    width: 100%;
+    padding: 1rem 0 3rem;
+}
+
+.rs-view-order-empty-card {
+    background: #ffffff;
+    border: 1px solid #ebebeb;
+    border-radius: 20px;
+    padding: 3.5rem 2rem 4rem;
+    text-align: center;
+    max-width: 620px;
+    margin: 0 auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+.rs-view-empty-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #fef2f2;
+    border: 1px solid #fee2e2;
+    color: #dc2626;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
+.rs-view-empty-title {
+    font-family: var(--font-serif, 'Playfair Display', Georgia, serif);
+    font-size: 1.85rem;
+    font-weight: 700;
+    color: #111111;
+    margin: 0 0 0.5rem;
+    letter-spacing: -0.4px;
+}
+
+.rs-view-empty-desc {
+    font-size: 0.95rem;
+    color: #666666;
+    margin: 0 auto 2rem;
+    max-width: 460px;
+    line-height: 1.55;
+}
+
+.rs-view-empty-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.rs-btn-back-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #111111;
+    color: #ffffff !important;
+    text-decoration: none;
+    font-size: 0.92rem;
+    font-weight: 600;
+    padding: 12px 26px;
+    border-radius: 999px;
+    transition: all 0.2s ease;
+}
+
+.rs-btn-back-primary:hover {
+    background: #333333;
+    transform: translateY(-1px);
+}
+
+.rs-btn-explore-secondary {
+    display: inline-flex;
+    align-items: center;
+    background: #ffffff;
+    color: #111111 !important;
+    border: 1px solid #dcdcdc;
+    text-decoration: none;
+    font-size: 0.92rem;
+    font-weight: 600;
+    padding: 12px 24px;
+    border-radius: 999px;
+    transition: all 0.2s ease;
+}
+
+.rs-btn-explore-secondary:hover {
+    border-color: #111111;
+    background: #fafaf8;
+}
+
+/* ==========================================================================
+   6. View Order Detail Screen
+   ========================================================================== */
+.rs-view-order-wrap {
+    width: 100%;
+}
+
+.rs-view-order-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 1px solid #ebebeb;
+    padding-bottom: 1.5rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.rs-order-title-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 6px;
+}
+
+.rs-view-order-title {
+    font-family: var(--font-serif, 'Playfair Display', Georgia, serif);
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #111111;
+    margin: 0;
+}
+
+.rs-view-order-meta {
+    font-size: 0.88rem;
+    color: #777777;
+    margin: 0;
+}
+
+.rs-view-order-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.rs-btn-view-track {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #111111;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 9px 18px;
+    border-radius: 999px;
+    transition: all 0.2s ease;
+}
+
+.rs-btn-view-track:hover {
+    background: #333333;
+}
+
+.rs-btn-back-orders {
+    color: #666666;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.rs-btn-back-orders:hover {
+    color: #111111;
+}
+
+/* Order Detail Card */
+.rs-order-detail-card {
+    background: #ffffff;
+    border: 1px solid #ebebeb;
+    border-radius: 18px;
+    padding: 26px 30px;
+    margin-bottom: 2rem;
+}
+
+.rs-card-subheading {
+    font-family: var(--font-serif, 'Playfair Display', Georgia, serif);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #111111;
+    margin: 0 0 1.25rem 0;
+}
+
+.rs-order-items-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border-bottom: 1px solid #ebebeb;
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.rs-view-item-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rs-view-item-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.rs-view-item-thumb {
+    width: 56px;
+    height: 56px;
+    border-radius: 10px;
+    object-fit: cover;
+    background: #fbf9f6;
+    border: 1px solid #f0eee8;
+    flex-shrink: 0;
+}
+
+.rs-view-item-name {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #111111;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.rs-view-item-qty {
+    font-size: 0.8rem;
+    color: #888888;
+    margin: 0;
+}
+
+.rs-view-item-price {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #111111;
+}
+
+/* Order Totals Table */
+.rs-order-totals-table-wrap {
+    max-width: 380px;
+    margin-left: auto;
+}
+
+.rs-order-totals-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.rs-order-totals-table th {
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: #666666;
+    text-align: left;
+    padding: 6px 0;
+}
+
+.rs-order-totals-table td {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #111111;
+    text-align: right;
+    padding: 6px 0;
+}
+
+.rs-order-totals-table tr.order-total th,
+.rs-order-totals-table tr.order-total td {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #111111;
+    border-top: 1px solid #ebebeb;
+    padding-top: 10px;
+    margin-top: 6px;
+}
+
+/* Address Grid in View Order */
+.rs-addresses-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.rs-address-box {
+    background: #fafaf8;
+    border: 1px solid #ebebeb;
+    border-radius: 16px;
+    padding: 22px 26px;
+}
+
+.rs-address-box-title {
+    font-family: var(--font-serif, 'Playfair Display', Georgia, serif);
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #111111;
+    margin: 0 0 0.85rem 0;
+}
+
+.rs-address-content {
+    font-size: 0.88rem;
+    color: #555555;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   7. Form Styling (Edit Account, Addresses)
+   ========================================================================== */
+.rs-edit-account-wrap,
+.rs-my-addresses-wrap,
+.rs-edit-address-wrap {
+    background: #ffffff;
+    border: 1px solid #ebebeb;
+    border-radius: 18px;
+    padding: 30px 34px;
+}
+
+.rs-account-form-header,
+.rs-addresses-header,
+.rs-address-form-header {
+    border-bottom: 1px solid #ebebeb;
+    padding-bottom: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.rs-account-form-title,
+.rs-addresses-heading,
+.rs-address-form-title {
+    font-family: var(--font-serif, 'Playfair Display', Georgia, serif);
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #111111;
+    margin: 0 0 4px 0;
+}
+
+.rs-account-form-subtext,
+.rs-addresses-subtext {
+    font-size: 0.88rem;
+    color: #777777;
+    margin: 0;
+}
+
+.rs-btn-back-addresses {
+    display: inline-block;
+    margin-top: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #666666;
+    text-decoration: none;
+}
+
+.rs-btn-back-addresses:hover {
+    color: #111111;
+}
+
+.rs-form-section {
+    margin-bottom: 2rem;
+    border: none;
+    padding: 0;
+}
+
+.rs-form-section-title {
+    font-family: var(--font-serif, 'Playfair Display', Georgia, serif);
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #111111;
+    margin: 0 0 1.25rem 0;
+}
+
+.rs-section-hint {
+    font-size: 0.825rem;
+    color: #888888;
+    margin: -10px 0 1.25rem 0;
+}
+
+.rs-form-row-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.rs-input-group {
+    margin-bottom: 1.25rem;
+}
+
+.rs-input-group label,
+.woocommerce-form-row label,
+.woocommerce-address-fields label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #222222;
+    margin-bottom: 6px;
+}
+
+.rs-input-group label .required,
+.woocommerce-form-row label .required {
+    color: #dc2626;
+    text-decoration: none;
+}
+
+.rs-text-input,
+.woocommerce-EditAccountForm input.input-text,
+.woocommerce-EditAccountForm input[type="password"],
+.woocommerce-EditAccountForm input[type="email"],
+.woocommerce-address-fields input.input-text,
+.woocommerce-address-fields select,
+.woocommerce-address-fields textarea {
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid #d4d4d4;
+    border-radius: 999px;
+    padding: 12px 18px;
+    font-size: 0.92rem;
+    color: #111111;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    box-sizing: border-box;
+}
+
+.woocommerce-address-fields textarea {
+    border-radius: 14px;
+    min-height: 90px;
+}
+
+.rs-text-input:focus,
+.woocommerce-EditAccountForm input:focus,
+.woocommerce-address-fields input:focus,
+.woocommerce-address-fields select:focus,
+.woocommerce-address-fields textarea:focus {
+    border-color: #111111;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
+}
+
+.rs-input-hint {
+    font-size: 0.78rem;
+    color: #888888;
+    display: block;
+    margin-top: 4px;
+}
+
+.rs-form-submit-row {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #ebebeb;
+}
+
+.rs-btn-primary-save,
+.woocommerce-EditAccountForm .button,
+.woocommerce-address-fields .button {
+    background: #111111 !important;
+    color: #ffffff !important;
+    font-size: 0.95rem !important;
+    font-weight: 600 !important;
+    padding: 13px 32px !important;
+    border-radius: 999px !important;
+    border: none !important;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.rs-btn-primary-save:hover,
+.woocommerce-EditAccountForm .button:hover,
+.woocommerce-address-fields .button:hover {
+    background: #333333 !important;
+    transform: translateY(-1px);
+}
+
+/* Saved Address Cards in Addresses Tab */
+.rs-address-card {
+    background: #ffffff;
+    border: 1px solid #ebebeb;
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 1.5rem;
+}
+
+.rs-address-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 10px;
+}
+
+.rs-address-type {
+    font-family: var(--font-serif, 'Playfair Display', Georgia, serif);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #111111;
+    margin: 0;
+}
+
+.rs-btn-edit-addr {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #111111;
+    text-decoration: none;
+    padding: 5px 12px;
+    border-radius: 999px;
+    background: #faf8f5;
+    border: 1px solid #e5e0d8;
+    transition: all 0.2s ease;
+}
+
+.rs-btn-edit-addr:hover {
+    background: #111111;
+    color: #ffffff;
+    border-color: #111111;
+}
+
+.rs-formatted-address {
+    font-style: normal;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #555555;
+}
+
+/* ==========================================================================
+   8. Login & Register Tab (Guests)
+   ========================================================================== */
+.rs-login-page-wrap {
+    background: #fafaf8;
+    padding: 3rem 0 6rem;
+}
+
+.rs-login-container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.rs-login-header {
+    text-align: center;
+    border-bottom: none;
+    margin-bottom: 2.5rem;
+}
+
+.rs-login-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.rs-login-single-wrap {
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+.rs-auth-card {
+    background: #ffffff;
+    border: 1px solid #ebebeb;
+    border-radius: 20px;
+    padding: 32px 36px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+.rs-auth-card-header {
+    margin-bottom: 1.75rem;
+}
+
+.rs-auth-title {
+    font-family: var(--font-serif, 'Playfair Display', Georgia, serif);
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #111111;
+    margin: 0 0 6px 0;
+}
+
+.rs-auth-desc {
+    font-size: 0.88rem;
+    color: #777777;
+    margin: 0;
+    line-height: 1.45;
+}
+
+.rs-login-options-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0 1.5rem 0;
+    font-size: 0.85rem;
+}
+
+.rs-checkbox-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #555555;
+    cursor: pointer;
+}
+
+.rs-lost-pw {
+    margin: 0;
+}
+
+.rs-lost-pw a {
+    color: #777777;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.rs-lost-pw a:hover {
+    color: #111111;
+    text-decoration: underline;
+}
+
+.rs-btn-auth-primary {
+    width: 100%;
+    background: #111111 !important;
+    color: #ffffff !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    padding: 13px 24px !important;
+    border-radius: 999px !important;
+    border: none !important;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.rs-btn-auth-primary:hover {
+    background: #333333 !important;
+}
+
+.rs-reg-privacy-note {
+    font-size: 0.8rem;
+    color: #888888;
+    margin: 0.5rem 0 1.5rem 0;
+    line-height: 1.4;
+}
+
+/* ==========================================================================
+   9. Mobile & Tablet Responsiveness
+   ========================================================================== */
+@media (max-width: 991px) {
+    .rs-myaccount-grid {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .rs-myaccount-sidebar {
+        flex: 1 1 100%;
+        width: 100%;
+        position: static;
+    }
+
+    .rs-dashboard-stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .rs-login-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .rs-myaccount-page-wrap {
+        padding: 1.5rem 0 4rem;
+    }
+
+    .rs-myaccount-title {
+        font-size: 1.85rem;
+    }
+
+    .rs-form-row-group,
+    .rs-addresses-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .rs-edit-account-wrap,
+    .rs-my-addresses-wrap,
+    .rs-edit-address-wrap,
+    .rs-order-detail-card,
+    .rs-auth-card {
+        padding: 22px 20px;
+    }
+
+    .rs-luxury-orders-table th {
+        display: none;
+    }
+
+    .rs-luxury-orders-table,
+    .rs-luxury-orders-table tbody,
+    .rs-luxury-orders-table tr,
+    .rs-luxury-orders-table td {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .rs-luxury-orders-table tr {
+        border-bottom: 1px solid #ebebeb;
+        padding: 14px 16px;
+    }
+
+    .rs-luxury-orders-table td {
+        padding: 6px 0;
+        border-bottom: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .rs-luxury-orders-table td::before {
+        content: attr(data-title);
+        font-weight: 600;
+        font-size: 0.8rem;
+        color: #777777;
+        text-transform: uppercase;
+    }
+
+    .rs-order-totals-table-wrap {
+        max-width: 100%;
+    }
+}

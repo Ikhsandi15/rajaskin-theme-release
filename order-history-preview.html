@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order History — RajaSkin</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/order-history.css">
+</head>
+<body>
+
+<header id="masthead" class="site-header rajaskin-header">
+    <div class="container header-grid">
+        <div class="header-left">
+            <nav id="site-navigation" class="main-navigation">
+                <ul class="header-menu">
+                    <li><a href="preview.html">Home</a></li>
+                    <li><a href="catalogue-preview.html">Catalogue</a></li>
+                    <li><a href="about-preview.html">About Us</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+            </button>
+        </div>
+
+        <div class="header-center">
+            <a href="preview.html" class="site-logo-text">RajaSkin</a>
+        </div>
+
+        <div class="header-right header-icons">
+            <a href="catalogue-preview.html" class="header-icon-link" aria-label="Search">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            </a>
+            <a href="catalogue-preview.html" class="header-icon-link wishlist-link" aria-label="Wishlist">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </a>
+            <a href="cart-preview.html" class="header-icon-link cart-link" aria-label="Cart">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                <span class="cart-count-badge">2</span>
+            </a>
+            <div class="rs-account-dropdown-wrap" id="rsAccountDropdownWrap">
+                <button type="button" class="header-icon-link account-link rs-account-trigger" id="rsAccountTrigger" aria-label="Profile Menu">
+                    <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                </button>
+
+                <div class="rs-account-dropdown" id="rsAccountDropdown">
+                    <div class="rs-dropdown-user-header">
+                        <span class="rs-dropdown-greeting">Welcome to RajaSkin</span>
+                        <a href="order-history-preview.html" class="rs-dropdown-login-btn">Sign In / Register</a>
+                    </div>
+                    <div class="rs-dropdown-divider"></div>
+
+                    <ul class="rs-dropdown-menu">
+                        <li class="rs-dropdown-item">
+                            <a href="order-history-preview.html" class="rs-dropdown-link">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                                <span>Profile Settings</span>
+                            </a>
+                        </li>
+                        <li class="rs-dropdown-item">
+                            <a href="order-history-preview.html" class="rs-dropdown-link">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                                <span>View Order</span>
+                            </a>
+                        </li>
+                        <li class="rs-dropdown-item">
+                            <a href="order-history-preview.html" class="rs-dropdown-link">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                <span>History Order</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mobile-menu-overlay"></div>
+</header>
+
+<main id="primary" class="site-main">
+    <div class="rs-order-history-wrap">
+
+        <!-- Breadcrumb -->
+        <div class="rs-oh-breadcrumb">
+            <a href="catalogue-preview.html">Catalogue</a>
+            <span class="sep">/</span>
+            <span class="current">Order History</span>
+        </div>
+
+        <!-- Title & Subtitle -->
+        <h1 class="rs-oh-title">Order History</h1>
+        <p class="rs-oh-subtitle">Manage, track, and review your skincare orders in one place.</p>
+
+        <!-- Active / In-Transit Order Card -->
+        <div class="rs-active-order-card" id="activeOrderCard">
+            <div class="active-order-header">
+                <div>
+                    <div class="active-order-title" id="activeOrderTitle">Order #RJ-8472</div>
+                    <p class="active-order-meta" id="activeOrderMeta">Placed on Jan 22, 2026 • Estimated Delivery: Jan 25, 2026</p>
+                </div>
+                <span class="rs-status-pill in-transit" id="activeOrderPill">In Transit</span>
+            </div>
+
+            <!-- 4-Step Tracking Stepper -->
+            <div class="rs-tracking-stepper">
+                <!-- Step 1: Processing -->
+                <div class="stepper-step completed" id="step1">
+                    <span class="step-icon-wrap">✓</span>
+                    <span class="step-label-text">Processing</span>
+                </div>
+                <div class="stepper-line completed" id="line1"></div>
+
+                <!-- Step 2: Shipped -->
+                <div class="stepper-step completed" id="step2">
+                    <span class="step-icon-wrap">✓</span>
+                    <span class="step-label-text">Shipped</span>
+                </div>
+                <div class="stepper-line completed" id="line2"></div>
+
+                <!-- Step 3: Out for Delivery -->
+                <div class="stepper-step active" id="step3">
+                    <span class="step-icon-wrap">●</span>
+                    <span class="step-label-text">Out for Delivery</span>
+                </div>
+                <div class="stepper-line pending" id="line3"></div>
+
+                <!-- Step 4: Delivered -->
+                <div class="stepper-step pending" id="step4">
+                    <span class="step-icon-wrap">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+                    </span>
+                    <span class="step-label-text">Delivered</span>
+                </div>
+            </div>
+
+            <!-- Product Item Details -->
+            <div class="rs-order-item-row">
+                <div class="order-item-left">
+                    <img src="assets/images/prod_pink_jar.jpg" alt="Hydration Serum V2" class="order-item-thumb" id="activeItemThumb">
+                    <div>
+                        <div class="order-item-name" id="activeItemName">Hydration Serum V2</div>
+                        <p class="order-item-qty" id="activeItemQty">Quantity: 1</p>
+                    </div>
+                </div>
+                <div class="order-item-right">
+                    <div class="order-item-price" id="activeItemPrice">Rp160.000</div>
+                    <p class="order-item-shipping">Free Shipping</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Previous Orders Section -->
+        <div class="rs-previous-orders-section">
+            <h3 class="rs-prev-orders-title">Previous Orders</h3>
+            <p class="rs-prev-orders-instruction" style="font-size: 0.82rem; color: #888; margin-top: -8px; margin-bottom: 14px;">Click any previous order to view its live tracking status.</p>
+            <div class="rs-prev-orders-list" id="previousOrdersList">
+                
+                <!-- Card 1 -->
+                <div class="rs-prev-order-card js-prev-order-item"
+                     data-demo-title="Order #RJ-7391"
+                     data-demo-meta="Placed on Jan 10, 2026 • Delivered on Jan 13, 2026"
+                     data-demo-pill="Delivered"
+                     data-demo-item="Pink Glow Cleanser"
+                     data-demo-qty="Quantity: 2"
+                     data-demo-price="Rp250.000"
+                     data-demo-thumb="assets/images/prod_pink_foam.jpg"
+                     role="button" tabindex="0">
+                    <div class="prev-order-left">
+                        <img src="assets/images/prod_pink_foam.jpg" alt="Order #RJ-7391" class="prev-order-thumb">
+                        <div>
+                            <div class="prev-order-title">Order #RJ-7391</div>
+                            <p class="prev-order-meta">Delivered on Jan 10, 2026 • 2 items</p>
+                        </div>
+                    </div>
+                    <div class="prev-order-right">
+                        <div class="prev-order-price">Rp250.000</div>
+                        <a href="cart-preview.html" class="btn-reorder" onclick="event.stopPropagation();">Reorder</a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="rs-prev-order-card js-prev-order-item"
+                     data-demo-title="Order #RJ-6210"
+                     data-demo-meta="Placed on Dec 20, 2025 • Delivered on Dec 23, 2025"
+                     data-demo-pill="Delivered"
+                     data-demo-item="Botanical Cleansing Oil"
+                     data-demo-qty="Quantity: 1"
+                     data-demo-price="Rp140.000"
+                     data-demo-thumb="assets/images/prod_cleansing_oil.jpg"
+                     role="button" tabindex="0">
+                    <div class="prev-order-left">
+                        <img src="assets/images/prod_cleansing_oil.jpg" alt="Order #RJ-6210" class="prev-order-thumb">
+                        <div>
+                            <div class="prev-order-title">Order #RJ-6210</div>
+                            <p class="prev-order-meta">Delivered on Dec 20, 2025 • 1 item</p>
+                        </div>
+                    </div>
+                    <div class="prev-order-right">
+                        <div class="prev-order-price">Rp140.000</div>
+                        <a href="cart-preview.html" class="btn-reorder" onclick="event.stopPropagation();">Reorder</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Luxury Empty Order History State Preview (Hidden by default, toggleable via demo switch) -->
+        <div class="rs-empty-oh-card" id="rsEmptyStateDemo" style="display: none;">
+            <div class="rs-empty-oh-icon-wrap">
+                <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                    <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                    <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                </svg>
+            </div>
+
+            <h2 class="rs-empty-oh-title">No Order History Found</h2>
+            <p class="rs-empty-oh-desc">You haven't placed any skincare orders yet. When you make a purchase, you can monitor real-time shipping updates, view package status, and quickly reorder your routine essentials here.</p>
+
+            <div class="rs-empty-oh-actions">
+                <a href="catalogue-preview.html" class="rs-btn-explore-catalogue">
+                    <span>Discover Our Collection</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+            </div>
+
+            <!-- Guest Quick Order Lookup Box -->
+            <div class="rs-guest-lookup-box">
+                <div class="rs-guest-lookup-header">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    <span>Already placed an order as a guest?</span>
+                </div>
+                <form class="rs-guest-lookup-form" onsubmit="event.preventDefault(); alert('In production, this looks up order in WooCommerce database.');">
+                    <div class="rs-lookup-inputs">
+                        <input type="text" placeholder="Enter Order ID (e.g. 1234 or RJ-1234)" required class="rs-lookup-input">
+                        <button type="submit" class="rs-lookup-btn">Track Order</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Trust Badges -->
+            <div class="rs-empty-oh-badges">
+                <div class="rs-oh-badge-item">
+                    <div class="rs-oh-badge-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    </div>
+                    <div class="rs-oh-badge-text">
+                        <strong>Live Order Tracking</strong>
+                        <span>Real-time courier updates</span>
+                    </div>
+                </div>
+                <div class="rs-oh-badge-item">
+                    <div class="rs-oh-badge-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+                    </div>
+                    <div class="rs-oh-badge-text">
+                        <strong>Order Invoicing</strong>
+                        <span>Official digital receipts</span>
+                    </div>
+                </div>
+                <div class="rs-oh-badge-item">
+                    <div class="rs-oh-badge-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="1 4 1 10 7 10"></polyline><polyline points="23 20 23 14 17 14"></polyline><path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"></path></svg>
+                    </div>
+                    <div class="rs-oh-badge-text">
+                        <strong>1-Click Reorder</strong>
+                        <span>Restock routine effortlessly</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Floating Demo State Switcher -->
+        <div style="position: fixed; bottom: 24px; right: 24px; z-index: 999; background: #111; color: #fff; padding: 8px 16px; border-radius: 999px; font-size: 0.8rem; font-weight: 600; cursor: pointer; box-shadow: 0 4px 16px rgba(0,0,0,0.2); display: flex; align-items: center; gap: 8px;" id="rsToggleEmptyDemo">
+            <span>⇄ Toggle Empty State</span>
+        </div>
+
+    </div>
+</main>
+
+<footer id="colophon" class="site-footer rs-site-footer">
+    <div class="container rs-footer-container">
+        <div class="rs-footer-top">
+            <nav class="rs-footer-nav" aria-label="Footer Navigation">
+                <ul class="rs-footer-menu">
+                    <li><a href="preview.html">Home</a></li>
+                    <li><a href="catalogue-preview.html">Catalogue</a></li>
+                    <li><a href="about-preview.html">About Us</a></li>
+                </ul>
+            </nav>
+
+            <div class="rs-footer-icons">
+                <a href="#" class="rs-footer-icon-link" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+                <a href="#" class="rs-footer-icon-link" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/></svg></a>
+                <a href="#" class="rs-footer-icon-link" aria-label="TikTok"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg></a>
+                <a href="#" class="rs-footer-icon-link" aria-label="X"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4l16 16M4 20L20 4"/></svg></a>
+            </div>
+        </div>
+
+        <!-- Giant Watermark Typography -->
+        <div class="rs-footer-watermark-wrap">
+            <h1 class="rs-footer-watermark">RajaSkin</h1>
+        </div>
+    </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Check if recent order is saved in localStorage and dynamically render
+    try {
+        var localOrders = JSON.parse(localStorage.getItem('rajaskin_orders') || '[]');
+        if (localOrders.length > 0) {
+            var latest = localOrders[0];
+            document.getElementById('activeOrderTitle').textContent = 'Order #' + (latest.order_number ? (latest.order_number.toString().startsWith('#') ? latest.order_number : '#' + latest.order_number) : 'RJ-8472');
+            if (latest.date) {
+                document.getElementById('activeOrderMeta').textContent = 'Placed on ' + latest.date + ' • Estimated Delivery: in 3 business days';
+            }
+            if (latest.total) {
+                document.getElementById('activeItemPrice').textContent = latest.total;
+            }
+        }
+    } catch(e) {
+        console.log(e);
+    }
+
+    // Click on previous order card to switch tracking view
+    document.querySelectorAll('.js-prev-order-item').forEach(function(card) {
+        card.addEventListener('click', function(e) {
+            if (e.target.closest('.btn-reorder')) return;
+
+            var title = this.getAttribute('data-demo-title');
+            var meta  = this.getAttribute('data-demo-meta');
+            var pill  = this.getAttribute('data-demo-pill');
+            var item  = this.getAttribute('data-demo-item');
+            var qty   = this.getAttribute('data-demo-qty');
+            var price = this.getAttribute('data-demo-price');
+            var thumb = this.getAttribute('data-demo-thumb');
+
+            var titleEl = document.getElementById('activeOrderTitle');
+            var metaEl  = document.getElementById('activeOrderMeta');
+            var pillEl  = document.getElementById('activeOrderPill');
+            var nameEl  = document.getElementById('activeItemName');
+            var qtyEl   = document.getElementById('activeItemQty');
+            var priceEl = document.getElementById('activeItemPrice');
+            var thumbEl = document.getElementById('activeItemThumb');
+
+            if (titleEl) titleEl.textContent = title;
+            if (metaEl)  metaEl.textContent  = meta;
+            if (nameEl)  nameEl.textContent  = item;
+            if (qtyEl)   qtyEl.textContent   = qty;
+            if (priceEl) priceEl.textContent = price;
+            if (thumbEl) thumbEl.src         = thumb;
+
+            if (pillEl) {
+                pillEl.textContent = pill;
+                pillEl.className = 'rs-status-pill status-completed';
+            }
+
+            ['step1', 'step2', 'step3', 'step4'].forEach(function(sId) {
+                var el = document.getElementById(sId);
+                if (el) el.className = 'stepper-step completed';
+            });
+            ['line1', 'line2', 'line3'].forEach(function(lId) {
+                var el = document.getElementById(lId);
+                if (el) el.className = 'stepper-line completed';
+            });
+
+            var activeCard = document.getElementById('activeOrderCard');
+            if (activeCard) {
+                activeCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                activeCard.classList.remove('card-highlight-flash');
+                void activeCard.offsetWidth;
+                activeCard.classList.add('card-highlight-flash');
+            }
+        });
+    });
+
+    // Profile / Account Dropdown Toggle
+    const accountWrap = document.getElementById('rsAccountDropdownWrap');
+    const accountTrigger = document.getElementById('rsAccountTrigger');
+
+    if (accountTrigger && accountWrap) {
+        accountTrigger.addEventListener('click', function(e) {
+            e.stopPropagation();
+            accountWrap.classList.toggle('active');
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!accountWrap.contains(e.target)) {
+                accountWrap.classList.remove('active');
+            }
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                accountWrap.classList.remove('active');
+            }
+        });
+    }
+
+    // Toggle Empty State in Preview
+    const toggleBtn = document.getElementById('rsToggleEmptyDemo');
+    const emptyCard = document.getElementById('rsEmptyStateDemo');
+    const activeCard = document.getElementById('activeOrderCard');
+    const prevSection = document.querySelector('.rs-previous-orders-section');
+
+    if (toggleBtn && emptyCard && activeCard) {
+        toggleBtn.addEventListener('click', function() {
+            var isShowingEmpty = emptyCard.style.display !== 'none';
+            if (isShowingEmpty) {
+                emptyCard.style.display = 'none';
+                activeCard.style.display = 'block';
+                if (prevSection) prevSection.style.display = 'block';
+                toggleBtn.querySelector('span').textContent = '⇄ Switch to Empty State';
+            } else {
+                emptyCard.style.display = 'block';
+                activeCard.style.display = 'none';
+                if (prevSection) prevSection.style.display = 'none';
+                toggleBtn.querySelector('span').textContent = '⇄ Switch to Active Orders';
+            }
+        });
+    }
+});
+</script>
+
+</body>
+</html>

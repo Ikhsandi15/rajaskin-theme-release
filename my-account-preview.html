@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account – RajaSkin Skincare</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/my-account.css">
+</head>
+<body class="page-template-default page woocommerce-account woocommerce-page">
+
+<!-- Top Navigation Header -->
+<header id="masthead" class="site-header rs-site-header rajaskin-header sticky-header">
+    <div class="container rs-header-container">
+        <div class="header-left">
+            <nav class="main-navigation" aria-label="Main Navigation">
+                <ul class="header-menu">
+                    <li><a href="preview.html">Home</a></li>
+                    <li><a href="catalogue-preview.html">Catalogue</a></li>
+                    <li><a href="about-preview.html">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="header-center">
+            <a href="preview.html" class="site-logo-text">RajaSkin</a>
+        </div>
+
+        <div class="header-right header-icons">
+            <a href="catalogue-preview.html" class="header-icon-link" aria-label="Search">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            </a>
+            <a href="catalogue-preview.html" class="header-icon-link wishlist-link" aria-label="Wishlist">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </a>
+            <a href="cart-preview.html" class="header-icon-link cart-link" aria-label="Cart">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                <span class="cart-count-badge">2</span>
+            </a>
+
+            <!-- Profile / Account Dropdown -->
+            <div class="rs-account-dropdown-wrap" id="rsAccountDropdownWrap">
+                <button type="button" class="header-icon-link account-link rs-account-trigger" id="rsAccountTrigger" aria-label="Profile Menu">
+                    <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                </button>
+
+                <div class="rs-account-dropdown" id="rsAccountDropdown">
+                    <div class="rs-dropdown-user-header">
+                        <span class="rs-dropdown-greeting">Signed in as</span>
+                        <span class="rs-dropdown-username">Sarah Jenkins</span>
+                    </div>
+                    <div class="rs-dropdown-divider"></div>
+
+                    <ul class="rs-dropdown-menu">
+                        <li class="rs-dropdown-item">
+                            <a href="my-account-preview.html" class="rs-dropdown-link">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                                <span>Profile & Settings</span>
+                            </a>
+                        </li>
+                        <li class="rs-dropdown-item">
+                            <a href="#orders" class="rs-dropdown-link" onclick="switchTab('orders')">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                                <span>View Order</span>
+                            </a>
+                        </li>
+                        <li class="rs-dropdown-item">
+                            <a href="order-history-preview.html" class="rs-dropdown-link">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                <span>History Order</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mobile-menu-overlay"></div>
+</header>
+
+<main id="primary" class="site-main">
+
+<div class="rs-myaccount-page-wrap">
+    <div class="container rs-myaccount-container">
+
+        <!-- Breadcrumbs -->
+        <nav class="rs-myaccount-breadcrumb" aria-label="Breadcrumb">
+            <a href="preview.html">Home</a>
+            <span class="sep">/</span>
+            <span class="current">My Account</span>
+        </nav>
+
+        <!-- Page Header Banner -->
+        <div class="rs-myaccount-header">
+            <h1 class="rs-myaccount-title">My Account</h1>
+            <p class="rs-myaccount-subtitle">Manage your personal details, saved addresses, orders, and skincare preferences.</p>
+        </div>
+
+        <!-- 2-Column Account Grid -->
+        <div class="rs-myaccount-grid">
+            
+            <!-- Sidebar Navigation -->
+            <nav class="woocommerce-MyAccount-navigation rs-myaccount-sidebar" aria-label="Account pages">
+                <div class="rs-account-user-card">
+                    <div class="rs-user-avatar">S</div>
+                    <div class="rs-user-info">
+                        <h4 class="rs-user-name">Sarah Jenkins</h4>
+                        <p class="rs-user-email">sarah.jenkins@example.com</p>
+                    </div>
+                </div>
+
+                <ul class="rs-myaccount-nav-list" id="accountNavList">
+                    <li class="woocommerce-MyAccount-navigation-link is-active" data-tab="dashboard">
+                        <a href="javascript:void(0)" class="rs-nav-link active" onclick="switchTab('dashboard')">
+                            <span class="rs-nav-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></span>
+                            <span class="rs-nav-text">Dashboard</span>
+                            <svg class="rs-nav-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                        </a>
+                    </li>
+                    <li class="woocommerce-MyAccount-navigation-link" data-tab="orders">
+                        <a href="javascript:void(0)" class="rs-nav-link" onclick="switchTab('orders')">
+                            <span class="rs-nav-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg></span>
+                            <span class="rs-nav-text">My Orders</span>
+                            <svg class="rs-nav-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                        </a>
+                    </li>
+                    <li class="woocommerce-MyAccount-navigation-link" data-tab="order-history">
+                        <a href="order-history-preview.html" class="rs-nav-link">
+                            <span class="rs-nav-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></span>
+                            <span class="rs-nav-text">Live Order Tracking</span>
+                            <svg class="rs-nav-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                        </a>
+                    </li>
+                    <li class="woocommerce-MyAccount-navigation-link" data-tab="edit-address">
+                        <a href="javascript:void(0)" class="rs-nav-link" onclick="switchTab('edit-address')">
+                            <span class="rs-nav-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></span>
+                            <span class="rs-nav-text">Addresses</span>
+                            <svg class="rs-nav-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                        </a>
+                    </li>
+                    <li class="woocommerce-MyAccount-navigation-link" data-tab="edit-account">
+                        <a href="javascript:void(0)" class="rs-nav-link" onclick="switchTab('edit-account')">
+                            <span class="rs-nav-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></span>
+                            <span class="rs-nav-text">Account Details</span>
+                            <svg class="rs-nav-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                        </a>
+                    </li>
+                    <li class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--customer-logout">
+                        <a href="preview.html" class="rs-nav-link">
+                            <span class="rs-nav-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg></span>
+                            <span class="rs-nav-text">Log Out</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Main Content Area -->
+            <div class="woocommerce-MyAccount-content rs-myaccount-main-content">
+                
+                <!-- TAB 1: DASHBOARD -->
+                <div class="rs-tab-pane active" id="tab-dashboard">
+                    <div class="rs-dashboard-wrap">
+                        <div class="rs-dashboard-welcome-banner">
+                            <div class="rs-welcome-text">
+                                <span class="rs-welcome-badge">RajaSkin VIP Member</span>
+                                <h2 class="rs-welcome-heading">Hello, <span>Sarah Jenkins</span>!</h2>
+                                <p class="rs-welcome-desc">From your account dashboard you can view your recent orders, manage your shipping and billing addresses, and edit your password and account details.</p>
+                            </div>
+                        </div>
+
+                        <div class="rs-dashboard-stats-grid">
+                            <div class="rs-stat-card">
+                                <div class="rs-stat-icon-wrap">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                                </div>
+                                <div class="rs-stat-info">
+                                    <span class="rs-stat-number">3</span>
+                                    <h4 class="rs-stat-title">Total Orders</h4>
+                                </div>
+                                <a href="javascript:void(0)" class="rs-stat-link" onclick="switchTab('orders')">
+                                    <span>View Orders</span>
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                                </a>
+                            </div>
+
+                            <div class="rs-stat-card">
+                                <div class="rs-stat-icon-wrap">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                </div>
+                                <div class="rs-stat-info">
+                                    <span class="rs-stat-number">#RJ-8472</span>
+                                    <h4 class="rs-stat-title">Latest Order Tracking</h4>
+                                </div>
+                                <a href="order-history-preview.html" class="rs-stat-link">
+                                    <span>Track Status</span>
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                                </a>
+                            </div>
+
+                            <div class="rs-stat-card">
+                                <div class="rs-stat-icon-wrap">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                </div>
+                                <div class="rs-stat-info">
+                                    <span class="rs-stat-text-val">Jakarta Selatan, ID</span>
+                                    <h4 class="rs-stat-title">Primary Address</h4>
+                                </div>
+                                <a href="javascript:void(0)" class="rs-stat-link" onclick="switchTab('edit-address')">
+                                    <span>Manage Address</span>
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="rs-dashboard-quick-actions">
+                            <h3 class="rs-section-title">Quick Actions</h3>
+                            <div class="rs-actions-button-group">
+                                <a href="javascript:void(0)" class="rs-btn-action" onclick="switchTab('edit-account')">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                                    <span>Edit Profile & Password</span>
+                                </a>
+                                <a href="catalogue-preview.html" class="rs-btn-action secondary">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                                    <span>Shop New Skincare Drops</span>
+                                </a>
+                                <a href="preview.html" class="rs-btn-action logout">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+                                    <span>Log Out</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB 2: MY ORDERS -->
+                <div class="rs-tab-pane" id="tab-orders" style="display: none;">
+                    <div class="rs-myaccount-orders-wrap">
+                        <div class="rs-orders-header-row">
+                            <div>
+                                <h2 class="rs-orders-heading">My Orders</h2>
+                                <p class="rs-orders-subtext">Review your past purchases, download invoices, or track real-time delivery status.</p>
+                            </div>
+                            <a href="order-history-preview.html" class="rs-btn-live-track">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                <span>Open Live Tracking Page</span>
+                            </a>
+                        </div>
+
+                        <div class="rs-orders-table-container">
+                            <table class="rs-luxury-orders-table">
+                                <thead>
+                                    <tr>
+                                        <th>Order</th>
+                                        <th>Date</th>
+                                        <th>Status</th>
+                                        <th>Total</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td data-title="Order">
+                                            <a href="order-history-preview.html" class="rs-order-num-link"><strong>#RJ-8472</strong></a>
+                                        </td>
+                                        <td data-title="Date">Jan 22, 2026</td>
+                                        <td data-title="Status">
+                                            <span class="rs-status-pill in-transit">In Transit</span>
+                                        </td>
+                                        <td data-title="Total">
+                                            <div class="rs-order-total-cell">
+                                                <span class="rs-order-price-val">Rp160.000</span>
+                                                <span class="rs-order-items-qty">1 item</span>
+                                            </div>
+                                        </td>
+                                        <td data-title="Actions">
+                                            <div class="rs-order-actions-wrap">
+                                                <a href="order-history-preview.html" class="rs-btn-track-mini">
+                                                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                                    <span>Track</span>
+                                                </a>
+                                                <a href="order-history-preview.html" class="rs-btn-details-mini">View</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td data-title="Order">
+                                            <a href="order-history-preview.html" class="rs-order-num-link"><strong>#RJ-7391</strong></a>
+                                        </td>
+                                        <td data-title="Date">Jan 10, 2026</td>
+                                        <td data-title="Status">
+                                            <span class="rs-status-pill status-completed">Delivered</span>
+                                        </td>
+                                        <td data-title="Total">
+                                            <div class="rs-order-total-cell">
+                                                <span class="rs-order-price-val">Rp250.000</span>
+                                                <span class="rs-order-items-qty">2 items</span>
+                                            </div>
+                                        </td>
+                                        <td data-title="Actions">
+                                            <div class="rs-order-actions-wrap">
+                                                <a href="order-history-preview.html" class="rs-btn-track-mini">Track</a>
+                                                <a href="cart-preview.html" class="rs-btn-details-mini">Reorder</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td data-title="Order">
+                                            <a href="order-history-preview.html" class="rs-order-num-link"><strong>#RJ-6210</strong></a>
+                                        </td>
+                                        <td data-title="Date">Dec 20, 2025</td>
+                                        <td data-title="Status">
+                                            <span class="rs-status-pill status-completed">Delivered</span>
+                                        </td>
+                                        <td data-title="Total">
+                                            <div class="rs-order-total-cell">
+                                                <span class="rs-order-price-val">Rp140.000</span>
+                                                <span class="rs-order-items-qty">1 item</span>
+                                            </div>
+                                        </td>
+                                        <td data-title="Actions">
+                                            <div class="rs-order-actions-wrap">
+                                                <a href="order-history-preview.html" class="rs-btn-track-mini">Track</a>
+                                                <a href="cart-preview.html" class="rs-btn-details-mini">Reorder</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB 3: ADDRESSES -->
+                <div class="rs-tab-pane" id="tab-edit-address" style="display: none;">
+                    <div class="rs-my-addresses-wrap">
+                        <div class="rs-addresses-header">
+                            <h2 class="rs-addresses-heading">Saved Addresses</h2>
+                            <p class="rs-addresses-subtext">The following addresses will be used on checkout pages by default.</p>
+                        </div>
+
+                        <div class="rs-addresses-grid">
+                            <div class="rs-address-card">
+                                <header class="rs-address-card-header">
+                                    <h3 class="rs-address-type">Billing Address</h3>
+                                    <a href="javascript:void(0)" class="rs-btn-edit-addr">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                                        <span>Edit</span>
+                                    </a>
+                                </header>
+                                <address class="rs-formatted-address">
+                                    Sarah Jenkins<br>
+                                    Jl. Senopati No. 42, Kebayoran Baru<br>
+                                    Jakarta Selatan, DKI Jakarta 12190<br>
+                                    Indonesia<br>
+                                    Phone: +62 812-3456-7890
+                                </address>
+                            </div>
+
+                            <div class="rs-address-card">
+                                <header class="rs-address-card-header">
+                                    <h3 class="rs-address-type">Shipping Address</h3>
+                                    <a href="javascript:void(0)" class="rs-btn-edit-addr">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                                        <span>Edit</span>
+                                    </a>
+                                </header>
+                                <address class="rs-formatted-address">
+                                    Sarah Jenkins<br>
+                                    Jl. Senopati No. 42, Kebayoran Baru<br>
+                                    Jakarta Selatan, DKI Jakarta 12190<br>
+                                    Indonesia
+                                </address>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB 4: ACCOUNT DETAILS -->
+                <div class="rs-tab-pane" id="tab-edit-account" style="display: none;">
+                    <div class="rs-edit-account-wrap">
+                        <div class="rs-account-form-header">
+                            <h2 class="rs-account-form-title">Account Details</h2>
+                            <p class="rs-account-form-subtext">Keep your personal information and login security updated.</p>
+                        </div>
+
+                        <form class="rs-luxury-form" onsubmit="alert('Account details saved successfully!'); return false;">
+                            <div class="rs-form-section">
+                                <h3 class="rs-form-section-title">Personal Information</h3>
+
+                                <div class="rs-form-row-group">
+                                    <div class="rs-input-group">
+                                        <label for="account_first_name">First name&nbsp;<span class="required">*</span></label>
+                                        <input type="text" class="rs-text-input" id="account_first_name" value="Sarah" required />
+                                    </div>
+                                    <div class="rs-input-group">
+                                        <label for="account_last_name">Last name&nbsp;<span class="required">*</span></label>
+                                        <input type="text" class="rs-text-input" id="account_last_name" value="Jenkins" required />
+                                    </div>
+                                </div>
+
+                                <div class="rs-input-group">
+                                    <label for="account_display_name">Display name&nbsp;<span class="required">*</span></label>
+                                    <input type="text" class="rs-text-input" id="account_display_name" value="Sarah Jenkins" required />
+                                    <span class="rs-input-hint">This will be how your name is displayed in your account and in product reviews.</span>
+                                </div>
+
+                                <div class="rs-input-group">
+                                    <label for="account_email">Email address&nbsp;<span class="required">*</span></label>
+                                    <input type="email" class="rs-text-input" id="account_email" value="sarah.jenkins@example.com" required />
+                                </div>
+                            </div>
+
+                            <fieldset class="rs-form-section rs-password-section">
+                                <legend class="rs-form-section-title">Password Change</legend>
+                                <p class="rs-section-hint">Leave blank to keep your current password unchanged.</p>
+
+                                <div class="rs-input-group">
+                                    <label for="password_current">Current password (leave blank to leave unchanged)</label>
+                                    <input type="password" class="rs-text-input" id="password_current" placeholder="••••••••" />
+                                </div>
+
+                                <div class="rs-form-row-group">
+                                    <div class="rs-input-group">
+                                        <label for="password_1">New password</label>
+                                        <input type="password" class="rs-text-input" id="password_1" placeholder="••••••••" />
+                                    </div>
+                                    <div class="rs-input-group">
+                                        <label for="password_2">Confirm new password</label>
+                                        <input type="password" class="rs-text-input" id="password_2" placeholder="••••••••" />
+                                    </div>
+                                </div>
+                            </fieldset>
+
+                            <div class="rs-form-submit-row">
+                                <button type="submit" class="rs-btn-primary-save">Save Changes</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</main>
+
+<footer id="colophon" class="site-footer rs-site-footer">
+    <div class="container rs-footer-container">
+        <div class="rs-footer-top">
+            <nav class="rs-footer-nav" aria-label="Footer Navigation">
+                <ul class="rs-footer-menu">
+                    <li><a href="preview.html">Home</a></li>
+                    <li><a href="catalogue-preview.html">Catalogue</a></li>
+                    <li><a href="about-preview.html">About Us</a></li>
+                </ul>
+            </nav>
+
+            <div class="rs-footer-icons">
+                <a href="#" class="rs-footer-icon-link" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+                <a href="#" class="rs-footer-icon-link" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/></svg></a>
+                <a href="#" class="rs-footer-icon-link" aria-label="TikTok"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg></a>
+                <a href="#" class="rs-footer-icon-link" aria-label="X"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4l16 16M4 20L20 4"/></svg></a>
+            </div>
+        </div>
+
+        <div class="rs-footer-watermark-wrap">
+            <h1 class="rs-footer-watermark">RajaSkin</h1>
+        </div>
+    </div>
+</footer>
+
+<script>
+function switchTab(tabKey) {
+    document.querySelectorAll('.rs-tab-pane').forEach(function(pane) {
+        pane.style.display = 'none';
+        pane.classList.remove('active');
+    });
+
+    document.querySelectorAll('#accountNavList li').forEach(function(li) {
+        li.classList.remove('is-active');
+        var link = li.querySelector('.rs-nav-link');
+        if (link) link.classList.remove('active');
+    });
+
+    var targetPane = document.getElementById('tab-' + tabKey);
+    if (targetPane) {
+        targetPane.style.display = 'block';
+        targetPane.classList.add('active');
+    }
+
+    var activeLi = document.querySelector('#accountNavList li[data-tab="' + tabKey + '"]');
+    if (activeLi) {
+        activeLi.classList.add('is-active');
+        var link = activeLi.querySelector('.rs-nav-link');
+        if (link) link.classList.add('active');
+    }
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Check URL hash if any
+    var hash = window.location.hash.replace('#', '');
+    if (hash && document.getElementById('tab-' + hash)) {
+        switchTab(hash);
+    }
+
+    // Account Dropdown Toggle
+    const accountWrap = document.getElementById('rsAccountDropdownWrap');
+    const accountTrigger = document.getElementById('rsAccountTrigger');
+
+    if (accountTrigger && accountWrap) {
+        accountTrigger.addEventListener('click', function(e) {
+            e.stopPropagation();
+            accountWrap.classList.toggle('active');
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!accountWrap.contains(e.target)) {
+                accountWrap.classList.remove('active');
+            }
+        });
+    }
+});
+</script>
+
+</body>
+</html>

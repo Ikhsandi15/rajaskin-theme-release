@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pay for Order #RJ-84920 — RajaSkin Luxury Skincare</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/checkout.css">
+</head>
+<body class="woocommerce-checkout woocommerce-order-pay">
+
+<!-- Header -->
+<header id="masthead" class="site-header rajaskin-header">
+    <div class="container header-grid">
+        <div class="header-left">
+            <nav id="site-navigation" class="main-navigation">
+                <ul class="header-menu">
+                    <li><a href="preview.html">Home</a></li>
+                    <li><a href="catalogue-preview.html">Catalogue</a></li>
+                    <li><a href="about-preview.html">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="header-center">
+            <a href="preview.html" class="site-logo-text">RajaSkin</a>
+        </div>
+
+        <div class="header-right header-icons">
+            <a href="#" class="header-icon-link" aria-label="Search">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            </a>
+            <a href="order-history-preview.html" class="header-icon-link" aria-label="Orders">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            </a>
+            <a href="cart-preview.html" class="header-icon-link cart-link" aria-label="Cart">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                <span class="cart-count-badge">2</span>
+            </a>
+        </div>
+    </div>
+</header>
+
+<main id="primary" class="site-main">
+    <div class="container rs-checkout-page-wrap rs-order-pay-page-wrap">
+
+        <!-- Top Step Progress Bar (Step 3: Payment Active) -->
+        <div class="checkout-step-tracker rs-pay-step-tracker">
+            <div class="step-tracker-item completed" data-step="1">
+                <div class="step-circle">✓</div>
+                <span class="step-label">Shipping</span>
+            </div>
+            <div class="step-line completed" data-line="1"></div>
+            <div class="step-tracker-item completed" data-step="2">
+                <div class="step-circle">✓</div>
+                <span class="step-label">Delivery</span>
+            </div>
+            <div class="step-line completed" data-line="2"></div>
+            <div class="step-tracker-item active" data-step="3">
+                <div class="step-circle">3</div>
+                <span class="step-label">Payment</span>
+            </div>
+            <div class="step-line" data-line="3"></div>
+            <div class="step-tracker-item" data-step="4">
+                <div class="step-circle">4</div>
+                <span class="step-label">Confirmation</span>
+            </div>
+        </div>
+
+        <!-- Main Payment Form -->
+        <form id="order_review" method="post" action="#" class="rs-order-pay-form">
+
+            <div class="checkout-main-grid rs-order-pay-grid">
+
+                <!-- LEFT COLUMN: Order Info & Payment Gateways -->
+                <div class="checkout-steps-col rs-order-pay-col-left">
+
+                    <!-- Order Header Banner / Notice Card -->
+                    <div class="rs-pay-order-header-card">
+                        <div class="rs-pay-header-top">
+                            <div>
+                                <div class="rs-pay-order-id-badge">
+                                    <span>Pay For Order</span>
+                                    <strong>#RJ-84920</strong>
+                                </div>
+                                <p class="rs-pay-order-meta">
+                                    Placed on <strong>2 September 2026</strong> by <strong>Jane Doe</strong>
+                                </p>
+                            </div>
+                            <span class="rs-pay-status-badge status-pending">
+                                <span class="rs-status-pulse-dot"></span>
+                                Awaiting Payment
+                            </span>
+                        </div>
+
+                        <!-- Destination & Shipping Mini-card -->
+                        <div class="rs-pay-dest-summary">
+                            <div class="rs-pay-dest-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#71717a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                <div class="rs-pay-dest-info">
+                                    <span class="rs-pay-dest-label">Delivery Destination</span>
+                                    <span class="rs-pay-dest-val">Kebayoran Baru, Jakarta Selatan, 12180</span>
+                                </div>
+                            </div>
+                            <div class="rs-pay-dest-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#71717a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="1" y="3" width="15" height="13"></rect>
+                                    <polygon points="16 8 20 8 23 11 23 16 16 16 8"></polygon>
+                                    <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                                    <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                                </svg>
+                                <div class="rs-pay-dest-info">
+                                    <span class="rs-pay-dest-label">Shipping Method</span>
+                                    <span class="rs-pay-dest-val">JNE Express (Next Day Delivery)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Payment Method Selection Card -->
+                    <div class="rs-pay-section-block">
+                        <h2 class="step-section-heading rs-pay-section-title">Select Payment Method</h2>
+                        <p class="rs-pay-section-subtitle">Choose your preferred payment method to complete this order securely.</p>
+
+                        <div id="payment" class="woocommerce-checkout-payment rs-order-pay-payment-wrapper">
+                            <ul class="wc_payment_methods payment_methods methods rs-pay-methods-list">
+                                
+                                <!-- Option 1: Bank Transfer (Virtual Account) -->
+                                <li class="wc_payment_method payment_method_bacs rs-pay-gateway-item is-selected">
+                                    <input id="payment_method_bacs" type="radio" class="input-radio" name="payment_method" value="bacs" checked="checked" />
+                                    <label for="payment_method_bacs" class="rs-pay-gateway-label">
+                                        <span class="rs-gateway-radio-custom"></span>
+                                        <div class="rs-gateway-info-box">
+                                            <div class="rs-gateway-title-row">
+                                                <span class="rs-gateway-title">Bank Transfer (BCA, Mandiri, BNI, BRI)</span>
+                                                <span class="rs-gateway-icon">
+                                                    <span class="bank-badge">BCA</span>
+                                                    <span class="bank-badge">BRI</span>
+                                                    <span class="bank-badge">MDR</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </label>
+                                    <div class="payment_box payment_method_bacs rs-pay-gateway-box" style="display:block;">
+                                        <p>Silakan transfer total pembayaran ke salah satu rekening resmi RajaSkin. Pesanan akan otomatis diverifikasi.</p>
+                                        <div style="background:#fff; border:1px solid #e5e7eb; border-radius:8px; padding:12px 16px; margin-top:8px;">
+                                            <div style="display:flex; justify-content:space-between; font-size:0.85rem; margin-bottom:4px;">
+                                                <span style="color:#666;">Bank BCA:</span>
+                                                <strong>8002 9182 0481</strong>
+                                            </div>
+                                            <div style="display:flex; justify-content:space-between; font-size:0.85rem;">
+                                                <span style="color:#666;">Atas Nama:</span>
+                                                <strong>PT RAJA SKINCARE INDONESIA</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <!-- Option 2: QRIS / Instant E-Wallet -->
+                                <li class="wc_payment_method payment_method_qris rs-pay-gateway-item">
+                                    <input id="payment_method_qris" type="radio" class="input-radio" name="payment_method" value="qris" />
+                                    <label for="payment_method_qris" class="rs-pay-gateway-label">
+                                        <span class="rs-gateway-radio-custom"></span>
+                                        <div class="rs-gateway-info-box">
+                                            <div class="rs-gateway-title-row">
+                                                <span class="rs-gateway-title">QRIS (GoPay, OVO, ShopeePay, Dana)</span>
+                                                <span class="rs-gateway-icon">
+                                                    <span class="bank-badge" style="background:#0f172a; color:#fff; border:none;">QRIS</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </label>
+                                    <div class="payment_box payment_method_qris rs-pay-gateway-box" style="display:none;">
+                                        <p>Scan kode QRIS menggunakan aplikasi e-wallet apa saja (GoPay, OVO, ShopeePay, DANA, BCA Mobile, dll) untuk konfirmasi instan 24/7.</p>
+                                    </div>
+                                </li>
+
+                                <!-- Option 3: Credit Card / Midtrans Payment -->
+                                <li class="wc_payment_method payment_method_cc rs-pay-gateway-item">
+                                    <input id="payment_method_cc" type="radio" class="input-radio" name="payment_method" value="cc" />
+                                    <label for="payment_method_cc" class="rs-pay-gateway-label">
+                                        <span class="rs-gateway-radio-custom"></span>
+                                        <div class="rs-gateway-info-box">
+                                            <div class="rs-gateway-title-row">
+                                                <span class="rs-gateway-title">Credit / Debit Card (Visa, Mastercard, JCB)</span>
+                                                <span class="rs-gateway-icon">
+                                                    <span class="bank-badge">VISA</span>
+                                                    <span class="bank-badge">MC</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </label>
+                                    <div class="payment_box payment_method_cc rs-pay-gateway-box" style="display:none;">
+                                        <p>Bayar langsung dengan aman melalui portal 3D-Secure Visa dan Mastercard.</p>
+                                    </div>
+                                </li>
+
+                            </ul>
+
+                            <!-- Submission Controls -->
+                            <div class="form-row rs-pay-actions-wrap">
+                                <button type="submit" class="button alt btn-step-next rs-btn-pay-now" id="place_order">
+                                    <span>Pay Now &bull; Rp 665.000</span>
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                                        <polyline points="12 5 19 12 12 19"></polyline>
+                                    </svg>
+                                </button>
+
+                                <div class="rs-pay-footer-links">
+                                    <a href="order-history-preview.html" class="btn-step-back">
+                                        &larr; Back to Order History
+                                    </a>
+                                    <a href="catalogue-preview.html" class="rs-pay-cancel-link">
+                                        Cancel and Return to Shop
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Trust Badges & Guarantee -->
+                    <div class="rs-pay-trust-badges">
+                        <div class="rs-trust-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                            <div>
+                                <strong>256-bit SSL Encrypted</strong>
+                                <span>Your transaction and personal data are 100% secure.</span>
+                            </div>
+                        </div>
+                        <div class="rs-trust-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            </svg>
+                            <div>
+                                <strong>100% Original Skincare</strong>
+                                <span>Guaranteed authentic formulas with BPOM certification.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- RIGHT COLUMN: Sticky Order Summary -->
+                <div class="checkout-summary-col rs-order-pay-col-right">
+                    <div class="order-summary-card rs-pay-summary-card">
+                        <h3 class="summary-card-title">Order Summary</h3>
+
+                        <!-- Items List -->
+                        <div class="summary-items-list rs-pay-items-list">
+                            <div class="summary-item-row">
+                                <div class="summary-item-thumb">
+                                    <img src="assets/images/prod_pink_jar.jpg" alt="Rose Hydrating Glow Serum">
+                                </div>
+                                <div class="summary-item-details">
+                                    <span class="summary-item-name" title="Rose Hydrating Glow Serum">Rose Hydrating Glow Serum</span>
+                                    <span class="summary-item-qty">Qty: 2 &bull; Size: 50ml</span>
+                                </div>
+                                <span class="summary-item-price">Rp 530.000</span>
+                            </div>
+
+                            <div class="summary-item-row">
+                                <div class="summary-item-thumb">
+                                    <img src="assets/images/prod_cream_jar.jpg" alt="Botanical Radiance Cleanser">
+                                </div>
+                                <div class="summary-item-details">
+                                    <span class="summary-item-name" title="Botanical Radiance Cleanser">Botanical Radiance Cleanser</span>
+                                    <span class="summary-item-qty">Qty: 1</span>
+                                </div>
+                                <span class="summary-item-price">Rp 135.000</span>
+                            </div>
+                        </div>
+
+                        <div class="summary-divider"></div>
+
+                        <!-- Financial Breakdown Rows -->
+                        <div class="summary-calc-rows">
+                            <div class="summary-calc-row">
+                                <span class="calc-label">Subtotal</span>
+                                <span class="calc-value">Rp 665.000</span>
+                            </div>
+                            <div class="summary-calc-row">
+                                <span class="calc-label">Shipping (JNE Express)</span>
+                                <span class="calc-value" style="color:#10b981; font-weight:600;">FREE</span>
+                            </div>
+                            <div class="summary-calc-row">
+                                <span class="calc-label">Tax (Included)</span>
+                                <span class="calc-value">Rp 0</span>
+                            </div>
+                        </div>
+
+                        <div class="summary-divider"></div>
+
+                        <!-- Grand Total Row -->
+                        <div class="summary-total-row rs-pay-total-row">
+                            <div>
+                                <span class="total-label-text">Total Amount Due</span>
+                                <span class="rs-pay-tax-note">Includes all taxes & delivery</span>
+                            </div>
+                            <span class="total-amount-text rs-pay-grand-total">Rp 665.000</span>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </form>
+
+    </div>
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-content" style="text-align:center; padding: 2rem 0; color:#888; font-size:0.85rem;">
+        <p>&copy; 2026 RajaSkin Luxury Skincare. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const gatewayItems = document.querySelectorAll('.rs-pay-gateway-item');
+    
+    gatewayItems.forEach(item => {
+        item.addEventListener('click', function(e) {
+            if (e.target.tagName === 'A' || e.target.tagName === 'BUTTON') return;
+            
+            gatewayItems.forEach(g => {
+                g.classList.remove('is-selected');
+                const box = g.querySelector('.rs-pay-gateway-box');
+                if (box) box.style.display = 'none';
+                const radio = g.querySelector('input[type="radio"]');
+                if (radio) radio.checked = false;
+            });
+
+            this.classList.add('is-selected');
+            const thisRadio = this.querySelector('input[type="radio"]');
+            if (thisRadio) thisRadio.checked = true;
+
+            const thisBox = this.querySelector('.rs-pay-gateway-box');
+            if (thisBox) thisBox.style.display = 'block';
+        });
+    });
+
+    document.getElementById('place_order').addEventListener('click', function(e) {
+        e.preventDefault();
+        this.innerHTML = '<span>Processing Secure Payment...</span>';
+        setTimeout(() => {
+            alert('Demo Mode: Payment successfully authorized for Order #RJ-84920!');
+            window.location.href = 'order-history-preview.html';
+        }, 800);
+    });
+});
+</script>
+
+</body>
+</html>

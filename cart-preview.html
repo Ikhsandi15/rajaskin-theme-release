@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart — RajaSkin</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/cart.css">
+</head>
+<body class="woocommerce-cart">
+
+<header id="masthead" class="site-header rajaskin-header">
+    <div class="container header-grid">
+        <div class="header-left">
+            <nav id="site-navigation" class="main-navigation">
+                <ul class="header-menu">
+                    <li><a href="preview.html">Home</a></li>
+                    <li><a href="catalogue-preview.html">Catalogue</a></li>
+                    <li><a href="about-preview.html">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="header-center">
+            <a href="preview.html" class="site-logo-text">RajaSkin</a>
+        </div>
+
+        <div class="header-right header-icons">
+            <a href="#" class="header-icon-link" aria-label="Search">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            </a>
+            <a href="#" class="header-icon-link wishlist-link" aria-label="Wishlist">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </a>
+            <a href="#" class="header-icon-link cart-link" aria-label="Cart">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                <span class="cart-count-badge">2</span>
+            </a>
+        </div>
+    </div>
+</header>
+
+<main id="primary" class="site-main">
+    <div class="container rs-cart-page-wrap">
+
+        <!-- Breadcrumb -->
+        <nav class="cart-breadcrumb">
+            <a href="preview.html">Home</a>
+            <span class="sep">/</span>
+            <span class="current">Shopping Cart</span>
+        </nav>
+
+        <!-- Page Header -->
+        <div class="cart-header-intro">
+            <h1 class="cart-page-title">Shopping Cart</h1>
+            <p class="cart-page-subtitle">Review your selected items and proceed to secure checkout.</p>
+        </div>
+
+        <form class="woocommerce-cart-form komerce-cart-form" action="#" method="post">
+            <div class="cart-layout">
+
+                <!-- LEFT COLUMN: Cart Items -->
+                <div class="cart-items-col">
+                    <h2 class="cart-col-title">Your Cart</h2>
+
+                    <!-- Selection & Clear Bar -->
+                    <div class="cart-select-bar">
+                        <label class="cart-custom-checkbox select-all-wrap">
+                            <input type="checkbox" id="cartSelectAll" checked>
+                            <span class="cart-checkmark"></span>
+                            <span class="select-count-text"><span class="selected-qty-num">2</span> Product Selected</span>
+                        </label>
+                        <button type="button" class="cart-clear-all" id="cartClearAll">Clear All</button>
+                    </div>
+
+                    <!-- Cart Items List -->
+                    <div class="cart-items-list">
+                        
+                        <!-- Item 1: Skin Protection -->
+                        <div class="cart-item-row" data-price="145000">
+                            <label class="cart-custom-checkbox item-checkbox">
+                                <input type="checkbox" class="cart-item-check" checked>
+                                <span class="cart-checkmark"></span>
+                            </label>
+
+                            <div class="cart-item-thumb">
+                                <img src="assets/images/prod_pink_jar.jpg" alt="Skin Protection">
+                            </div>
+
+                            <div class="cart-item-info">
+                                <span class="cart-item-category">SKIN CARE</span>
+                                <h3 class="cart-item-name"><a href="#">Skin Protection</a></h3>
+                                <div class="cart-item-qty-wrap">
+                                    <div class="qty-control">
+                                        <button type="button" class="qty-minus" aria-label="Decrease">−</button>
+                                        <input type="number" class="qty" value="1" min="1" max="99" step="1">
+                                        <button type="button" class="qty-plus" aria-label="Increase">+</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="cart-item-right">
+                                <button type="button" class="cart-item-remove-btn" aria-label="Remove item">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="3 6 5 6 21 6"></polyline>
+                                        <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                                        <line x1="10" y1="11" x2="10" y2="17"></line>
+                                        <line x1="14" y1="11" x2="14" y2="17"></line>
+                                    </svg>
+                                </button>
+                                <div class="cart-item-subtotal">Rp145.000</div>
+                            </div>
+                        </div>
+
+                        <!-- Item 2: Sunscreen Protection -->
+                        <div class="cart-item-row" data-price="145000">
+                            <label class="cart-custom-checkbox item-checkbox">
+                                <input type="checkbox" class="cart-item-check" checked>
+                                <span class="cart-checkmark"></span>
+                            </label>
+
+                            <div class="cart-item-thumb">
+                                <img src="assets/images/prod_cleansing_oil.jpg" alt="Sunscreen Protection">
+                            </div>
+
+                            <div class="cart-item-info">
+                                <span class="cart-item-category">SKIN CARE</span>
+                                <h3 class="cart-item-name"><a href="#">Sunscreen Protection</a></h3>
+                                <div class="cart-item-qty-wrap">
+                                    <div class="qty-control">
+                                        <button type="button" class="qty-minus" aria-label="Decrease">−</button>
+                                        <input type="number" class="qty" value="1" min="1" max="99" step="1">
+                                        <button type="button" class="qty-plus" aria-label="Increase">+</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="cart-item-right">
+                                <button type="button" class="cart-item-remove-btn" aria-label="Remove item">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="3 6 5 6 21 6"></polyline>
+                                        <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                                        <line x1="10" y1="11" x2="10" y2="17"></line>
+                                        <line x1="14" y1="11" x2="14" y2="17"></line>
+                                    </svg>
+                                </button>
+                                <div class="cart-item-subtotal">Rp145.000</div>
+                            </div>
+                        </div>
+
+                        <!-- Item 3: Moisturizing Shampoo -->
+                        <div class="cart-item-row" data-price="75000">
+                            <label class="cart-custom-checkbox item-checkbox">
+                                <input type="checkbox" class="cart-item-check">
+                                <span class="cart-checkmark"></span>
+                            </label>
+
+                            <div class="cart-item-thumb">
+                                <img src="assets/images/prod_pink_foam.jpg" alt="Moisturizing Shampoo">
+                            </div>
+
+                            <div class="cart-item-info">
+                                <span class="cart-item-category">HAIR CARE</span>
+                                <h3 class="cart-item-name"><a href="#">Moisturizing Shampoo</a></h3>
+                                <div class="cart-item-qty-wrap">
+                                    <div class="qty-control">
+                                        <button type="button" class="qty-minus" aria-label="Decrease">−</button>
+                                        <input type="number" class="qty" value="1" min="1" max="99" step="1">
+                                        <button type="button" class="qty-plus" aria-label="Increase">+</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="cart-item-right">
+                                <button type="button" class="cart-item-remove-btn" aria-label="Remove item">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="3 6 5 6 21 6"></polyline>
+                                        <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                                        <line x1="10" y1="11" x2="10" y2="17"></line>
+                                        <line x1="14" y1="11" x2="14" y2="17"></line>
+                                    </svg>
+                                </button>
+                                <div class="cart-item-subtotal">Rp75.000</div>
+                            </div>
+                        </div>
+
+                        <!-- Item 4: Foundation -->
+                        <div class="cart-item-row" data-price="200000">
+                            <label class="cart-custom-checkbox item-checkbox">
+                                <input type="checkbox" class="cart-item-check">
+                                <span class="cart-checkmark"></span>
+                            </label>
+
+                            <div class="cart-item-thumb">
+                                <img src="assets/images/prod_cleansing_oil.jpg" alt="Foundation">
+                            </div>
+
+                            <div class="cart-item-info">
+                                <span class="cart-item-category">MAKEUP</span>
+                                <h3 class="cart-item-name"><a href="#">Foundation</a></h3>
+                                <div class="cart-item-qty-wrap">
+                                    <div class="qty-control">
+                                        <button type="button" class="qty-minus" aria-label="Decrease">−</button>
+                                        <input type="number" class="qty" value="1" min="1" max="99" step="1">
+                                        <button type="button" class="qty-plus" aria-label="Increase">+</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="cart-item-right">
+                                <button type="button" class="cart-item-remove-btn" aria-label="Remove item">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="3 6 5 6 21 6"></polyline>
+                                        <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                                        <line x1="10" y1="11" x2="10" y2="17"></line>
+                                        <line x1="14" y1="11" x2="14" y2="17"></line>
+                                    </svg>
+                                </button>
+                                <div class="cart-item-subtotal">Rp200.000</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- RIGHT COLUMN: Order Summary -->
+                <div class="cart-summary-col">
+                    <div class="cart-summary-card">
+                        <h3 class="summary-title">Order Summary</h3>
+
+                        <div class="summary-row subtotal-row">
+                            <span class="summary-label">Subtotal (<span class="summary-count">2 Products</span>)</span>
+                            <span class="summary-value subtotal-value">Rp265.000</span>
+                        </div>
+
+                        <div class="summary-divider"></div>
+
+                        <div class="summary-row total-row">
+                            <span class="total-label">TOTAL</span>
+                            <span class="total-value cart-total-value">Rp291.500</span>
+                        </div>
+
+                        <div class="summary-actions">
+                            <a href="#" class="btn-cart-checkout">Checkout</a>
+                            <a href="preview.html#catalogue" class="btn-continue-shopping">Continue Shopping</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </form>
+    </div>
+</main>
+
+<footer id="colophon" class="site-footer rs-site-footer">
+    <div class="container rs-footer-container">
+        <div class="rs-footer-top">
+            <nav class="rs-footer-nav" aria-label="Footer Navigation">
+                <ul class="rs-footer-menu">
+                    <li><a href="preview.html">Home</a></li>
+                    <li><a href="catalogue-preview.html">Catalogue</a></li>
+                    <li><a href="about-preview.html">About Us</a></li>
+                </ul>
+            </nav>
+
+            <div class="rs-footer-icons">
+                <a href="#" class="rs-footer-icon-link" aria-label="Facebook">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                </a>
+                <a href="#" class="rs-footer-icon-link" aria-label="Instagram">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                </a>
+                <a href="#" class="rs-footer-icon-link" aria-label="TikTok">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+                </a>
+                <a href="#" class="rs-footer-icon-link" aria-label="X">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l16 16M4 20L20 4"/></svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="rs-footer-watermark-wrap">
+            <h1 class="rs-footer-watermark">RajaSkin</h1>
+        </div>
+    </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Select all & counter handling
+    const selectAll = document.getElementById('cartSelectAll');
+    const itemChecks = document.querySelectorAll('.cart-item-check');
+    const selectQtyNum = document.querySelector('.selected-qty-num');
+    const summaryCount = document.querySelector('.summary-count');
+
+    function updateCounts() {
+        const checked = document.querySelectorAll('.cart-item-check:checked');
+        const checkedCount = checked.length;
+        if (selectQtyNum) selectQtyNum.textContent = checkedCount;
+        if (summaryCount) summaryCount.textContent = checkedCount + ' Products';
+        if (selectAll) selectAll.checked = checkedCount === itemChecks.length && itemChecks.length > 0;
+    }
+
+    if (selectAll) {
+        selectAll.addEventListener('change', function() {
+            itemChecks.forEach(cb => cb.checked = selectAll.checked);
+            updateCounts();
+        });
+    }
+
+    itemChecks.forEach(cb => {
+        cb.addEventListener('change', updateCounts);
+    });
+
+    function checkEmptyCart() {
+        const remainingItems = document.querySelectorAll('.cart-item-row');
+        if (remainingItems.length === 0) {
+            const form = document.querySelector('.komerce-cart-form');
+            if (form) {
+                form.innerHTML = `
+                    <div class="cart-empty-state">
+                        <div class="empty-icon-wrap">
+                            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                                <line x1="3" y1="6" x2="21" y2="6"></line>
+                                <path d="M16 10a4 4 0 0 1-8 0"></path>
+                            </svg>
+                        </div>
+                        <h2 class="empty-cart-title">Your shopping cart is empty</h2>
+                        <p class="empty-cart-desc">Looks like you haven't added any products to your cart yet. Explore our curated clinical skincare collection and begin your glowing journey.</p>
+                        
+                        <div class="empty-cart-action">
+                            <a href="catalogue-preview.html" class="btn-return-shop">
+                                <span>Discover Our Products</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                            </a>
+                        </div>
+
+                        <!-- Trust & Benefit Perks -->
+                        <div class="cart-empty-perks-grid">
+                            <div class="perk-item">
+                                <div class="perk-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+                                </div>
+                                <div class="perk-text">
+                                    <strong>Free Delivery</strong>
+                                    <span>On orders over Rp500.000</span>
+                                </div>
+                            </div>
+                            <div class="perk-item">
+                                <div class="perk-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><polyline points="9 12 11 14 15 10"></polyline></svg>
+                                </div>
+                                <div class="perk-text">
+                                    <strong>100% Authentic</strong>
+                                    <span>BPOM Certified & Tested</span>
+                                </div>
+                            </div>
+                            <div class="perk-item">
+                                <div class="perk-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                                </div>
+                                <div class="perk-text">
+                                    <strong>Secure Payment</strong>
+                                    <span>Multi-channel protected</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+            const badge = document.querySelector('.cart-count-badge');
+            if (badge) badge.style.display = 'none';
+        }
+    }
+
+    // Clear all button
+    const clearAllBtn = document.getElementById('cartClearAll');
+    if (clearAllBtn) {
+        clearAllBtn.addEventListener('click', function() {
+            if (confirm('Clear all items from cart?')) {
+                document.querySelectorAll('.cart-item-row').forEach(row => row.remove());
+                checkEmptyCart();
+            }
+        });
+    }
+
+    // Remove row animation
+    document.querySelectorAll('.cart-item-remove-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const row = this.closest('.cart-item-row');
+            if (row) {
+                row.style.transition = 'opacity 0.25s ease, transform 0.25s ease';
+                row.style.opacity = '0';
+                row.style.transform = 'translateX(20px)';
+                setTimeout(() => {
+                    row.remove();
+                    updateCounts();
+                    checkEmptyCart();
+                }, 250);
+            }
+        });
+    });
+});
+</script>
+
+</body>
+</html>

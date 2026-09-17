@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout — RajaSkin</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/checkout.css">
+</head>
+<body class="woocommerce-checkout">
+
+<header id="masthead" class="site-header rajaskin-header">
+    <div class="container header-grid">
+        <div class="header-left">
+            <nav id="site-navigation" class="main-navigation">
+                <ul class="header-menu">
+                    <li><a href="preview.html">Home</a></li>
+                    <li><a href="catalogue-preview.html">Catalogue</a></li>
+                    <li><a href="about-preview.html">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="header-center">
+            <a href="preview.html" class="site-logo-text">RajaSkin</a>
+        </div>
+
+        <div class="header-right header-icons">
+            <a href="#" class="header-icon-link" aria-label="Search">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            </a>
+            <a href="#" class="header-icon-link wishlist-link" aria-label="Wishlist">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </a>
+            <a href="cart-preview.html" class="header-icon-link cart-link" aria-label="Cart">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                <span class="cart-count-badge">2</span>
+            </a>
+        </div>
+    </div>
+</header>
+
+<main id="primary" class="site-main">
+    <div class="container rs-checkout-page-wrap">
+
+        <!-- Top Step Tracker -->
+        <div class="checkout-step-tracker">
+            <div class="step-tracker-item active" data-step="1">
+                <div class="step-circle">1</div>
+                <span class="step-label">Shipping</span>
+            </div>
+            <div class="step-line" data-line="1"></div>
+            <div class="step-tracker-item" data-step="2">
+                <div class="step-circle">2</div>
+                <span class="step-label">Delivery</span>
+            </div>
+            <div class="step-line" data-line="2"></div>
+            <div class="step-tracker-item" data-step="3">
+                <div class="step-circle">3</div>
+                <span class="step-label">Payment</span>
+            </div>
+            <div class="step-line" data-line="3"></div>
+            <div class="step-tracker-item" data-step="4">
+                <div class="step-circle">4</div>
+                <span class="step-label">Review</span>
+            </div>
+        </div>
+
+        <form name="checkout" method="post" class="checkout woocommerce-checkout rs-step-checkout-form" action="#">
+
+            <div class="checkout-main-grid">
+
+                <!-- LEFT COLUMN: Step Panels -->
+                <div class="checkout-steps-col">
+
+                    <!-- STEP 1: SHIPPING -->
+                    <div class="checkout-step-panel active" id="stepPanel1" data-step="1">
+                        <!-- Contact Information -->
+                        <div class="form-section-block">
+                            <h2 class="step-section-heading">Contact Information</h2>
+                            
+                            <div class="form-grid-2">
+                                <div class="form-group">
+                                    <label for="billing_first_name">First Name</label>
+                                    <input type="text" name="billing_first_name" id="billing_first_name" class="rs-input" value="Jane" placeholder="Jane" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="billing_last_name">Last Name</label>
+                                    <input type="text" name="billing_last_name" id="billing_last_name" class="rs-input" value="Doe" placeholder="Doe" required>
+                                </div>
+                            </div>
+
+                            <div class="form-grid-2">
+                                <div class="form-group">
+                                    <label for="billing_email">Email Address</label>
+                                    <input type="email" name="billing_email" id="billing_email" class="rs-input" value="jane@example.com" placeholder="jane@example.com" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="billing_phone">Phone Number</label>
+                                    <input type="tel" name="billing_phone" id="billing_phone" class="rs-input" value="+62 812 3456 7890" placeholder="+62 812 3456 7890" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Address Details -->
+                        <div class="form-section-block">
+                            <h2 class="step-section-heading">Address Details</h2>
+
+                            <div class="form-grid-2">
+                                <div class="form-group" id="cart-destination-field">
+                                    <label for="billing_city">Pilih Destinasi</label>
+                                    <input type="text" name="billing_city" id="billing_city" class="rs-input" placeholder="Pilih Destinasi (Kecamatan / Kota)" value="Kecamatan Menteng, Kota Jakarta Pusat" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="billing_postcode">Postal Code</label>
+                                    <input type="text" name="billing_postcode" id="billing_postcode" class="rs-input" placeholder="90001" value="10310" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group form-group-full">
+                                <label for="billing_address_1">Alamat Lengkap</label>
+                                <textarea name="billing_address_1" id="billing_address_1" class="rs-textarea" rows="3" placeholder="Nama jalan, nomor rumah, RT/RW, dsb." required>Jl. Sudirman No. 42, RT 01/RW 02</textarea>
+                            </div>
+                        </div>
+
+                        <!-- Step 1 Actions -->
+                        <div class="step-actions-row">
+                            <a href="cart-preview.html" class="btn-step-back">Back to Cart</a>
+                            <button type="button" class="btn-step-next" id="btnToDelivery">Continue to Delivery</button>
+                        </div>
+                    </div>
+
+                    <!-- STEP 2: DELIVERY -->
+                    <div class="checkout-step-panel" id="stepPanel2" data-step="2">
+                        <h2 class="step-section-heading">Delivery Method</h2>
+
+                        <div class="delivery-methods-list">
+                            <label class="delivery-method-card" data-cost="10000" data-name="JNE Flat" data-desc="1-3 business days">
+                                <div class="dm-radio-wrap">
+                                    <input type="radio" name="rs_shipping_method" value="jne_flat" data-cost="10000" data-name="JNE Flat" data-desc="1-3 business days">
+                                    <span class="dm-radio-dot"></span>
+                                </div>
+                                <div class="dm-info">
+                                    <span class="dm-name">JNE Flat</span>
+                                    <span class="dm-desc">1-3 business days</span>
+                                </div>
+                                <div class="dm-price">Rp10.000</div>
+                            </label>
+
+                            <label class="delivery-method-card active" data-cost="15000" data-name="ID Express" data-desc="2-3 business days">
+                                <div class="dm-radio-wrap">
+                                    <input type="radio" name="rs_shipping_method" value="id_express" data-cost="15000" data-name="ID Express" data-desc="2-3 business days" checked>
+                                    <span class="dm-radio-dot"></span>
+                                </div>
+                                <div class="dm-info">
+                                    <span class="dm-name">ID Express</span>
+                                    <span class="dm-desc">2-3 business days</span>
+                                </div>
+                                <div class="dm-price">Rp15.000</div>
+                            </label>
+
+                            <label class="delivery-method-card" data-cost="30000" data-name="Ninja Express" data-desc="within 24 hours">
+                                <div class="dm-radio-wrap">
+                                    <input type="radio" name="rs_shipping_method" value="ninja_express" data-cost="30000" data-name="Ninja Express" data-desc="within 24 hours">
+                                    <span class="dm-radio-dot"></span>
+                                </div>
+                                <div class="dm-info">
+                                    <span class="dm-name">Ninja Express</span>
+                                    <span class="dm-desc">within 24 hours</span>
+                                </div>
+                                <div class="dm-price">Rp30.000</div>
+                            </label>
+                        </div>
+
+                        <div class="step-actions-row">
+                            <button type="button" class="btn-step-back" id="btnBackToShipping">Back to Shipping</button>
+                            <button type="button" class="btn-step-next" id="btnToPayment">Continue to Payment</button>
+                        </div>
+                    </div>
+
+                    <!-- STEP 3: PAYMENT -->
+                    <div class="checkout-step-panel" id="stepPanel3" data-step="3">
+                        <h2 class="step-section-heading">Payment Method</h2>
+
+                        <div class="payment-methods-list">
+                            <div class="payment-method-box active" id="pmBoxBankTransfer">
+                                <label class="pm-box-header">
+                                    <div class="dm-radio-wrap">
+                                        <input type="radio" name="payment_method_group" value="bacs" checked>
+                                        <span class="dm-radio-dot"></span>
+                                    </div>
+                                    <span class="pm-header-title">Bank Transfer/VA</span>
+                                </label>
+
+                                <div class="bank-options-list" id="bankOptionsList">
+                                    <div class="bank-item-row" data-bank="BCA" data-va="3901 0284 9283 8472">
+                                        <span class="bank-badge">BCA</span>
+                                        <span class="bank-name">Bank BCA</span>
+                                        <span class="bank-chevron">›</span>
+                                    </div>
+                                    <div class="bank-item-row" data-bank="BRI" data-va="8801 7362 9182 4519">
+                                        <span class="bank-badge">BRI</span>
+                                        <span class="bank-name">Bank BRI</span>
+                                        <span class="bank-chevron">›</span>
+                                    </div>
+                                    <div class="bank-item-row" data-bank="BNI" data-va="9881 2938 4719 0283">
+                                        <span class="bank-badge">BNI</span>
+                                        <span class="bank-name">Bank BNI</span>
+                                        <span class="bank-chevron">›</span>
+                                    </div>
+                                    <div class="bank-item-row" data-bank="Mandiri" data-va="8902 4819 2038 5719">
+                                        <span class="bank-badge">MDR</span>
+                                        <span class="bank-name">Bank Mandiri</span>
+                                        <span class="bank-chevron">›</span>
+                                    </div>
+                                    <div class="bank-item-row" data-bank="Jago" data-va="1029 4820 1938 4721">
+                                        <span class="bank-badge">JAGO</span>
+                                        <span class="bank-name">Bank Jago</span>
+                                        <span class="bank-chevron">›</span>
+                                    </div>
+                                    <div class="bank-item-row" data-bank="Danamon" data-va="7720 1938 4729 1029">
+                                        <span class="bank-badge">DNM</span>
+                                        <span class="bank-name">Bank Danamon</span>
+                                        <span class="bank-chevron">›</span>
+                                    </div>
+                                </div>
+
+                                <div class="selected-va-card" id="selectedVaCard" style="display:none;">
+                                    <div class="va-card-top">
+                                        <span class="va-bank-label" id="vaBankNameLabel">BANK BCA</span>
+                                        <button type="button" class="btn-change-bank" id="btnChangeBank">Change</button>
+                                    </div>
+                                    <div class="va-number-row">
+                                        <span class="va-number-code" id="vaNumberDisplay">3901 0284 9283 8472</span>
+                                        <button type="button" class="btn-copy-va" id="btnCopyVa">
+                                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                            <span class="copy-text">COPY</span>
+                                        </button>
+                                    </div>
+                                    <div class="va-card-bottom">
+                                        <div class="va-amount-info">
+                                            <span class="va-amount-label">TOTAL AMOUNT</span>
+                                            <span class="va-amount-value" id="vaAmountDisplay">RP. 291.500</span>
+                                        </div>
+                                        <div class="va-status-badge">
+                                            <span class="status-dot">●</span> WAITING FOR PAYMENT
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="payment-method-box" id="pmBoxQris">
+                                <label class="pm-box-header">
+                                    <div class="dm-radio-wrap">
+                                        <input type="radio" name="payment_method_group" value="qris">
+                                        <span class="dm-radio-dot"></span>
+                                    </div>
+                                    <span class="pm-header-title">QRIS</span>
+                                </label>
+                                <div class="qris-content" id="qrisContent" style="display:none;">
+                                    <div class="qris-qr-wrap">
+                                        <svg width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect><rect x="14" y="14" width="3" height="3"></rect><rect x="18" y="18" width="3" height="3"></rect></svg>
+                                        <p class="qris-instruction">Scan this QRIS with GoPay, OVO, Dana, BCA, or any banking app.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="step-actions-row">
+                            <button type="button" class="btn-step-back" id="btnBackToDelivery">Back to Delivery</button>
+                            <button type="button" class="btn-step-next" id="btnToReview">Continue to Review</button>
+                        </div>
+                    </div>
+
+                    <!-- STEP 4: REVIEW -->
+                    <div class="checkout-step-panel" id="stepPanel4" data-step="4">
+                        <h2 class="step-section-heading">Review Your Order</h2>
+
+                        <!-- 1. Shipping Address -->
+                        <div class="review-info-card">
+                            <h4 class="review-card-title">Shipping Address</h4>
+                            <p class="review-customer-name" id="revCustomerName">Jane Doe</p>
+                            <p class="review-contact-line" id="revContactLine">+62 812 3456 7890 | jane@example.com</p>
+                            <p class="review-address-line" id="revAddressLine">Jl. Sudirman No. 42, RT 01/RW 02, Kecamatan Menteng, Kota Jakarta Pusat, DKI Jakarta, 10310</p>
+                        </div>
+
+                        <!-- 2. Delivery Method -->
+                        <div class="review-info-card">
+                            <h4 class="review-card-title">Delivery Method</h4>
+                            <p class="review-delivery-name" id="revDeliveryName">ID Express</p>
+                            <p class="review-delivery-meta" id="revDeliveryMeta">2-3 business days &nbsp;•&nbsp; Rp15.000</p>
+                        </div>
+
+                        <!-- 3. Payment Method -->
+                        <div class="review-info-card">
+                            <div class="review-pm-header">
+                                <h4 class="review-card-title">Payment Method</h4>
+                                <div class="va-status-badge">
+                                    <span class="status-dot">●</span> WAITING FOR PAYMENT
+                                </div>
+                            </div>
+                            <p class="review-pm-name" id="revPmName">Bank Transfer/VA</p>
+                            <p class="review-pm-meta" id="revPmMeta">Bank BCA &nbsp;•&nbsp; 3901 0284 9283 8472</p>
+                        </div>
+
+                        <!-- 4. Order Items -->
+                        <div class="review-info-card">
+                            <h4 class="review-card-title">Order Items</h4>
+                            <div class="review-items-list">
+                                <div class="review-item-row">
+                                    <div class="review-item-thumb">
+                                        <img src="assets/images/prod_pink_jar.jpg" alt="Skin Protection">
+                                    </div>
+                                    <div class="review-item-info">
+                                        <span class="review-item-name">Skin Protection</span>
+                                        <span class="review-item-qty">Qty: 1</span>
+                                    </div>
+                                    <div class="review-item-price">Rp120.000</div>
+                                </div>
+                                <div class="review-item-row">
+                                    <div class="review-item-thumb">
+                                        <img src="assets/images/prod_cleansing_oil.jpg" alt="Soothe Essence">
+                                    </div>
+                                    <div class="review-item-info">
+                                        <span class="review-item-name">Soothe Essence</span>
+                                        <span class="review-item-qty">Qty: 1</span>
+                                    </div>
+                                    <div class="review-item-price">Rp145.000</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="step-actions-row">
+                            <button type="button" class="btn-step-back" id="btnBackToPayment">Back to Payment</button>
+                            <button type="submit" formtarget="_blank" class="btn-place-order" id="place_order">Place Order</button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- RIGHT COLUMN: Order Summary Card -->
+                <div class="checkout-summary-col">
+                    <div class="order-summary-card">
+                        <h3 class="summary-card-title">Order Summary</h3>
+
+                        <div class="summary-items-list">
+                            <div class="summary-item-row">
+                                <div class="summary-item-thumb">
+                                    <img src="assets/images/prod_pink_jar.jpg" alt="Skin Protection">
+                                </div>
+                                <div class="summary-item-details">
+                                    <span class="summary-item-name">Skin Protection</span>
+                                    <span class="summary-item-qty">Qty: 1</span>
+                                </div>
+                                <div class="summary-item-price">Rp120.000</div>
+                            </div>
+                            <div class="summary-item-row">
+                                <div class="summary-item-thumb">
+                                    <img src="assets/images/prod_cleansing_oil.jpg" alt="Soothe Essence">
+                                </div>
+                                <div class="summary-item-details">
+                                    <span class="summary-item-name">Soothe Essence</span>
+                                    <span class="summary-item-qty">Qty: 1</span>
+                                </div>
+                                <div class="summary-item-price">Rp145.000</div>
+                            </div>
+                        </div>
+
+                        <div class="summary-divider"></div>
+
+                        <div class="summary-calc-row">
+                            <span class="calc-label">Shipping Fee</span>
+                            <span class="calc-value" id="summaryShippingFee">Rp15.000</span>
+                        </div>
+
+                        <div class="summary-calc-row">
+                            <span class="calc-label">Subtotal (2 Products)</span>
+                            <span class="calc-value" id="summarySubtotal">Rp265.000</span>
+                        </div>
+
+                        <div class="summary-divider"></div>
+
+                        <div class="summary-total-row">
+                            <span class="total-label-text">TOTAL</span>
+                            <span class="total-amount-text" id="summaryGrandTotal">Rp291.500</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </form>
+
+        <!-- Order Confirmed Card (shown after successful order placement) -->
+        <div class="rs-order-confirmed-card" id="orderConfirmedCard" style="display: none;">
+            <div class="rs-confirmed-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+            </div>
+
+            <h1 class="rs-confirmed-title">Order Confirmed!</h1>
+            <p class="rs-confirmed-desc">
+                Your order <strong id="confOrderNum">#RS-20240315</strong> has been placed successfully. A confirmation email has been sent to <strong id="confEmail">jane@example.com</strong>
+            </p>
+
+            <div class="rs-confirmed-details">
+                <div class="rs-detail-row">
+                    <span class="rs-detail-label">Order Number</span>
+                    <span class="rs-detail-value" id="rowOrderNum">#RS-20240315</span>
+                </div>
+                <div class="rs-detail-row">
+                    <span class="rs-detail-label">Order Date</span>
+                    <span class="rs-detail-value" id="rowOrderDate">15 March 2024</span>
+                </div>
+                <div class="rs-detail-row">
+                    <span class="rs-detail-label">Total Amount</span>
+                    <span class="rs-detail-value" id="rowTotalAmount">Rp291.500</span>
+                </div>
+                <div class="rs-detail-row">
+                    <span class="rs-detail-label">Payment Method</span>
+                    <span class="rs-detail-value" id="rowPaymentMethod">Bank Transfer</span>
+                </div>
+                <div class="rs-detail-row">
+                    <span class="rs-detail-label">Est. Delivery</span>
+                    <span class="rs-detail-value" id="rowEstDelivery">2-3 business days</span>
+                </div>
+            </div>
+
+            <a href="preview.html" class="btn-track-order">Track Order</a>
+        </div>
+
+    </div>
+</main>
+
+<footer id="colophon" class="site-footer rs-site-footer">
+    <div class="container rs-footer-container">
+        <div class="rs-footer-top">
+            <nav class="rs-footer-nav">
+                <ul class="rs-footer-menu">
+                    <li><a href="preview.html">Home</a></li>
+                    <li><a href="catalogue-preview.html">Catalogue</a></li>
+                    <li><a href="about-preview.html">About Us</a></li>
+                </ul>
+            </nav>
+
+            <div class="rs-footer-icons">
+                <a href="#" class="rs-footer-icon-link" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+                <a href="#" class="rs-footer-icon-link" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/></svg></a>
+                <a href="#" class="rs-footer-icon-link" aria-label="TikTok"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg></a>
+                <a href="#" class="rs-footer-icon-link" aria-label="X"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4l16 16M4 20L20 4"/></svg></a>
+            </div>
+        </div>
+
+        <div class="rs-footer-watermark-wrap">
+            <h1 class="rs-footer-watermark">RajaSkin</h1>
+        </div>
+    </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    let currentStep = 1;
+    let rawSubtotal = 265000;
+    let currentShippingCost = 15000;
+    let selectedBank = 'BCA';
+    let selectedVa = '3901 0284 9283 8472';
+    let selectedPm = 'Bank Transfer/VA';
+    let selectedCourier = 'ID Express';
+    let selectedCourierDesc = '2-3 business days';
+
+    function formatRupiah(num) {
+        return 'Rp' + Math.round(num).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+    }
+
+    function updateGrandTotal() {
+        const total = rawSubtotal + currentShippingCost;
+        const formatted = formatRupiah(total);
+        document.getElementById('summaryShippingFee').textContent = formatRupiah(currentShippingCost);
+        document.getElementById('summaryGrandTotal').textContent = formatted;
+        document.getElementById('vaAmountDisplay').textContent = formatted.toUpperCase();
+    }
+
+    function goToStep(step) {
+        currentStep = step;
+
+        document.querySelectorAll('.step-tracker-item').forEach(item => {
+            const s = parseInt(item.getAttribute('data-step'));
+            item.classList.remove('active', 'completed');
+            if (s === step) {
+                item.classList.add('active');
+            } else if (s < step) {
+                item.classList.add('completed');
+            }
+        });
+
+        document.querySelectorAll('.step-line').forEach(line => {
+            const l = parseInt(line.getAttribute('data-line'));
+            line.classList.toggle('completed', l < step);
+        });
+
+        document.querySelectorAll('.checkout-step-panel').forEach(panel => {
+            panel.classList.remove('active');
+        });
+        document.getElementById('stepPanel' + step).classList.add('active');
+
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+
+        if (step === 4) {
+            const firstName = document.getElementById('billing_first_name').value || 'Jane';
+            const lastName = document.getElementById('billing_last_name').value || 'Doe';
+            const email = document.getElementById('billing_email').value || 'jane@example.com';
+            const phone = document.getElementById('billing_phone').value || '+62 812 3456 7890';
+            const city = document.getElementById('billing_city').value || 'Kecamatan Menteng, Kota Jakarta Pusat';
+            const postcode = document.getElementById('billing_postcode').value || '10310';
+            const address = document.getElementById('billing_address_1').value || 'Jl. Sudirman No. 42, RT 01/RW 02';
+
+            document.getElementById('revCustomerName').textContent = firstName + ' ' + lastName;
+            document.getElementById('revContactLine').textContent = phone + ' | ' + email;
+            document.getElementById('revAddressLine').textContent = address + ', ' + city + ', ' + postcode;
+
+            document.getElementById('revDeliveryName').textContent = selectedCourier;
+            document.getElementById('revDeliveryMeta').innerHTML = selectedCourierDesc + ' &nbsp;•&nbsp; ' + formatRupiah(currentShippingCost);
+
+            document.getElementById('revPmName').textContent = selectedPm;
+            if (selectedPm === 'Bank Transfer/VA') {
+                document.getElementById('revPmMeta').innerHTML = 'Bank ' + selectedBank + ' &nbsp;•&nbsp; ' + selectedVa;
+            } else {
+                document.getElementById('revPmMeta').textContent = 'QRIS Online';
+            }
+        }
+    }
+
+    function isValidEmail(email) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+
+    function validateStep1() {
+        const firstName = document.getElementById('billing_first_name').value.trim();
+        const email = document.getElementById('billing_email').value.trim();
+        const phone = document.getElementById('billing_phone').value.trim();
+        const city = document.getElementById('billing_city').value.trim();
+        const address = document.getElementById('billing_address_1').value.trim();
+
+        const valid = firstName.length > 0 &&
+                      email.length > 0 && isValidEmail(email) &&
+                      phone.length >= 6 &&
+                      city.length > 0 &&
+                      address.length > 0;
+
+        const btn = document.getElementById('btnToDelivery');
+        btn.disabled = !valid;
+        btn.classList.toggle('disabled', !valid);
+        return valid;
+    }
+
+    function validateStep2() {
+        const hasShipping = !!document.querySelector('input[name="rs_shipping_method"]:checked');
+        const btn = document.getElementById('btnToPayment');
+        btn.disabled = !hasShipping;
+        btn.classList.toggle('disabled', !hasShipping);
+        return hasShipping;
+    }
+
+    function validateStep3() {
+        const hasPm = !!document.querySelector('input[name="rs_payment_method"]:checked');
+        const btn = document.getElementById('btnToReview');
+        btn.disabled = !hasPm;
+        btn.classList.toggle('disabled', !hasPm);
+        return hasPm;
+    }
+
+    document.querySelectorAll('#stepPanel1 input, #stepPanel1 textarea').forEach(input => {
+        input.addEventListener('input', validateStep1);
+        input.addEventListener('change', validateStep1);
+    });
+
+    document.querySelectorAll('.step-tracker-item').forEach(item => {
+        item.addEventListener('click', function() {
+            const targetStep = parseInt(this.getAttribute('data-step'));
+            if (targetStep < currentStep) {
+                goToStep(targetStep);
+            } else if (targetStep === 2 && validateStep1()) {
+                goToStep(2);
+            } else if (targetStep === 3 && validateStep1() && validateStep2()) {
+                goToStep(3);
+            } else if (targetStep === 4 && validateStep1() && validateStep2() && validateStep3()) {
+                goToStep(4);
+            }
+        });
+    });
+
+    document.getElementById('btnToDelivery').addEventListener('click', () => {
+        if (validateStep1()) goToStep(2);
+    });
+    document.getElementById('btnBackToShipping').addEventListener('click', () => goToStep(1));
+    document.getElementById('btnToPayment').addEventListener('click', () => {
+        if (validateStep2()) goToStep(3);
+    });
+    document.getElementById('btnBackToDelivery').addEventListener('click', () => goToStep(2));
+    document.getElementById('btnToReview').addEventListener('click', () => {
+        if (validateStep3()) goToStep(4);
+    });
+    document.getElementById('btnBackToPayment').addEventListener('click', () => goToStep(3));
+
+    document.querySelectorAll('input[name="rs_shipping_method"]').forEach(radio => {
+        radio.addEventListener('change', function() {
+            document.querySelectorAll('.delivery-method-card').forEach(card => card.classList.remove('active'));
+            this.closest('.delivery-method-card').classList.add('active');
+            selectedCourier = this.getAttribute('data-name');
+            selectedCourierDesc = this.getAttribute('data-desc');
+            currentShippingCost = parseInt(this.getAttribute('data-cost'));
+            updateGrandTotal();
+            validateStep2();
+        });
+    });
+
+    document.querySelectorAll('input[name="rs_payment_method"]').forEach(radio => {
+        radio.addEventListener('change', function() {
+            document.querySelectorAll('.payment-method-box').forEach(box => box.classList.remove('active'));
+            const box = this.closest('.payment-method-box');
+            box.classList.add('active');
+
+            if (this.value === 'bank_transfer') {
+                selectedPm = 'Bank Transfer/VA';
+                document.getElementById('bankOptionsList').style.display = 'flex';
+                document.getElementById('qrisContent').style.display = 'none';
+            } else {
+                selectedPm = 'QRIS';
+                document.getElementById('bankOptionsList').style.display = 'none';
+                document.getElementById('selectedVaCard').style.display = 'none';
+                document.getElementById('qrisContent').style.display = 'block';
+            }
+            validateStep3();
+        });
+    });
+
+    document.querySelectorAll('.bank-item-row').forEach(item => {
+        item.addEventListener('click', function() {
+            selectedBank = this.getAttribute('data-bank');
+            selectedVa = this.getAttribute('data-va');
+
+            document.getElementById('vaBankNameLabel').textContent = 'BANK ' + selectedBank.toUpperCase();
+            document.getElementById('vaNumberDisplay').textContent = selectedVa;
+
+            document.getElementById('bankOptionsList').style.display = 'none';
+            document.getElementById('selectedVaCard').style.display = 'block';
+            validateStep3();
+        });
+    });
+
+    document.getElementById('btnChangeBank').addEventListener('click', (e) => {
+        e.stopPropagation();
+        document.getElementById('selectedVaCard').style.display = 'none';
+        document.getElementById('bankOptionsList').style.display = 'flex';
+    });
+
+    document.getElementById('btnCopyVa').addEventListener('click', () => {
+        const text = document.getElementById('vaNumberDisplay').textContent.replace(/\s/g, '');
+        navigator.clipboard.writeText(text).then(() => {
+            const span = document.querySelector('#btnCopyVa .copy-text');
+            span.textContent = 'COPIED!';
+            setTimeout(() => { span.textContent = 'COPY'; }, 2000);
+        });
+    });
+
+    // Place Order Click Handler
+    document.getElementById('place_order').addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        // Populate Order Confirmed Card data
+        const email = (document.getElementById('shippingEmail').value || 'jane@example.com').trim();
+        const total = document.getElementById('summaryGrandTotal').textContent.trim();
+        
+        document.getElementById('confEmail').textContent = email;
+        document.getElementById('rowTotalAmount').textContent = total;
+        document.getElementById('rowPaymentMethod').textContent = selectedPm || 'Bank Transfer';
+        document.getElementById('rowEstDelivery').textContent = selectedCourierDesc || '2-3 business days';
+
+        // Mark all tracker steps as completed
+        document.querySelectorAll('.step-tracker-item').forEach(item => {
+            item.classList.remove('active');
+            item.classList.add('completed');
+        });
+        document.querySelectorAll('.step-line').forEach(line => {
+            line.classList.add('completed');
+        });
+
+        // Hide checkout form and show Order Confirmed Card
+        document.querySelector('.rs-step-checkout-form').style.display = 'none';
+        document.getElementById('orderConfirmedCard').style.display = 'block';
+
+        // Scroll smoothly to top
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    updateGrandTotal();
+    validateStep1();
+    validateStep2();
+    validateStep3();
+});
+</script>
+
+</body>
+</html>

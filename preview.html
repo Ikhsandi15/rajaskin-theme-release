@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RajaSkin — Your Daily Glow Partner</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Theme Styles -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/home.css">
+</head>
+<body>
+
+<header id="masthead" class="site-header rajaskin-header">
+    <div class="container header-grid">
+        <div class="header-left">
+            <nav id="site-navigation" class="main-navigation">
+                <ul class="header-menu">
+                    <li><a href="preview.html" class="active">Home</a></li>
+                    <li><a href="catalogue-preview.html">Catalogue</a></li>
+                    <li><a href="about-preview.html">About Us</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+            </button>
+        </div>
+
+        <div class="header-center">
+            <a href="#" class="site-logo-text">RajaSkin</a>
+        </div>
+
+        <div class="header-right header-icons">
+            <a href="#categories" class="header-icon-link" aria-label="Search">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            </a>
+            <a href="#products" class="header-icon-link wishlist-link" aria-label="Wishlist">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </a>
+            <a href="#" class="header-icon-link cart-link" aria-label="Cart">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                <span class="cart-count-badge">2</span>
+            </a>
+            <div class="rs-account-dropdown-wrap" id="rsAccountDropdownWrap">
+                <button type="button" class="header-icon-link account-link rs-account-trigger" id="rsAccountTrigger" aria-label="Profile Menu">
+                    <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                </button>
+
+                <div class="rs-account-dropdown" id="rsAccountDropdown">
+                    <div class="rs-dropdown-user-header">
+                        <span class="rs-dropdown-greeting">Welcome to RajaSkin</span>
+                        <a href="order-history-preview.html" class="rs-dropdown-login-btn">Sign In / Register</a>
+                    </div>
+                    <div class="rs-dropdown-divider"></div>
+
+                    <ul class="rs-dropdown-menu">
+                        <li class="rs-dropdown-item">
+                            <a href="order-history-preview.html" class="rs-dropdown-link">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                                <span>Profile Settings</span>
+                            </a>
+                        </li>
+                        <li class="rs-dropdown-item">
+                            <a href="order-history-preview.html" class="rs-dropdown-link">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                                <span>View Order</span>
+                            </a>
+                        </li>
+                        <li class="rs-dropdown-item">
+                            <a href="order-history-preview.html" class="rs-dropdown-link">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                <span>History Order</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mobile-menu-overlay"></div>
+</header>
+
+<main id="primary" class="site-main">
+
+<div class="rajaskin-home">
+
+    <!-- ============================================
+         1. HERO SECTION
+    ============================================= -->
+    <section class="rs-hero-section">
+        <div class="container">
+            <div class="rs-hero-card">
+                <div class="rs-hero-bg">
+                    <img src="assets/images/hero_glow_banner.jpg" alt="RajaSkin Your Daily Glow Partner" class="rs-hero-img">
+                    <div class="rs-hero-overlay"></div>
+                </div>
+                <div class="rs-hero-content">
+                    <h1 class="rs-hero-title">Your Daily Glow Partner</h1>
+                    <p class="rs-hero-subtitle">Clinical results meet organic purity.</p>
+                    <a href="#products" class="rs-hero-btn">
+                        Discover Our Products
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         2. BRAND PHILOSOPHY & FEATURES
+    ============================================= -->
+    <section id="philosophy" class="rs-philosophy-section">
+        <div class="container">
+            <div class="rs-philosophy-header">
+                <span class="rs-section-tag">Our Philosophy</span>
+                <p class="rs-philosophy-text">
+                    RajaSkin is a personal care brand committed to build a better future for the earth and humanity. We celebrate self-care with a fresh approach where sustainability, effectiveness, and style meet.
+                </p>
+            </div>
+
+            <div class="rs-features-grid">
+                <div class="rs-feature-card">
+                    <div class="rs-feature-icon-box">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2l2.4 7.2L22 12l-7.6 2.8L12 22l-2.4-7.2L2 12l7.6-2.8z"/>
+                        </svg>
+                    </div>
+                    <div class="rs-feature-body">
+                        <h3 class="rs-feature-title">Cruelty-Free</h3>
+                        <p class="rs-feature-desc">100% cruelty-free and vegan certified formulas that care for all living things.</p>
+                    </div>
+                </div>
+
+                <div class="rs-feature-card">
+                    <div class="rs-feature-icon-box">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
+                            <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
+                        </svg>
+                    </div>
+                    <div class="rs-feature-body">
+                        <h3 class="rs-feature-title">Natural Ingredients</h3>
+                        <p class="rs-feature-desc">High performance botanical extracts and clean formulations backed by science.</p>
+                    </div>
+                </div>
+
+                <div class="rs-feature-card">
+                    <div class="rs-feature-icon-box">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M7 19H4.815a1.83 1.83 0 0 1-1.57-.881 1.785 1.785 0 0 1-.004-1.784L7.196 9.5"/>
+                            <path d="M11 19h8.2a1.8 1.8 0 0 0 1.5-2.8L17.5 11"/>
+                            <path d="m16 16 3 3-3 3"/>
+                            <path d="M16.5 6.5 12 2 7.5 6.5"/>
+                            <path d="M12 2v10"/>
+                        </svg>
+                    </div>
+                    <div class="rs-feature-body">
+                        <h3 class="rs-feature-title">Eco-Friendly</h3>
+                        <p class="rs-feature-desc">Recyclable packaging, minimizing our footprint for a healthier earth.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         3. SHOP BY CATEGORY
+    ============================================= -->
+    <section id="categories" class="rs-category-section">
+        <div class="container">
+            <div class="rs-section-title-wrap">
+                <h2 class="rs-section-heading">Shop by Category</h2>
+            </div>
+
+            <div class="rs-slider-container">
+                <div class="rs-category-grid" id="categorySlider">
+                    <a href="#products" class="rs-category-card">
+                        <div class="rs-cat-img-box">
+                            <img src="assets/images/cat_soft_care.jpg" alt="Soft Care">
+                        </div>
+                        <div class="rs-cat-info">
+                            <span class="rs-cat-name">Soft Care</span>
+                            <span class="rs-cat-arrow">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                            </span>
+                        </div>
+                    </a>
+
+                    <a href="#products" class="rs-category-card">
+                        <div class="rs-cat-img-box">
+                            <img src="assets/images/cat_sun_protect.jpg" alt="Sun Protection">
+                        </div>
+                        <div class="rs-cat-info">
+                            <span class="rs-cat-name">Sun Protection</span>
+                            <span class="rs-cat-arrow">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                            </span>
+                        </div>
+                    </a>
+
+                    <a href="#products" class="rs-category-card">
+                        <div class="rs-cat-img-box">
+                            <img src="assets/images/cat_body_care.jpg" alt="Body Care">
+                        </div>
+                        <div class="rs-cat-info">
+                            <span class="rs-cat-name">Body Care</span>
+                            <span class="rs-cat-arrow">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                            </span>
+                        </div>
+                    </a>
+
+                    <a href="#products" class="rs-category-card">
+                        <div class="rs-cat-img-box">
+                            <img src="assets/images/cat_hair_care.jpg" alt="Hair Care">
+                        </div>
+                        <div class="rs-cat-info">
+                            <span class="rs-cat-name">Hair Care</span>
+                            <span class="rs-cat-arrow">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                            </span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="rs-slider-nav">
+                    <button type="button" class="rs-nav-btn rs-nav-prev" onclick="scrollSlider('categorySlider', -1)" aria-label="Previous Categories">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+                    </button>
+                    <button type="button" class="rs-nav-btn rs-nav-next" onclick="scrollSlider('categorySlider', 1)" aria-label="Next Categories">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         4. OUR BEST SELLER PRODUCTS
+    ============================================= -->
+    <section id="products" class="rs-products-section">
+        <div class="container">
+            <div class="rs-section-title-wrap">
+                <h2 class="rs-section-heading">Our Best Seller Products</h2>
+            </div>
+
+            <div class="rs-slider-container">
+                <div class="rs-products-grid" id="productSlider">
+                    <!-- Product 1 -->
+                    <div class="rs-product-card">
+                        <div class="rs-prod-img-box">
+                            <a href="product-preview.html">
+                                <img src="assets/images/cat_soft_care.jpg" alt="Pure Skin Cleanser">
+                            </a>
+                            <button type="button" class="rs-prod-wishlist" aria-label="Add to wishlist">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                            </button>
+                        </div>
+                        <div class="rs-prod-info">
+                            <div class="rs-prod-meta">
+                                <a href="product-preview.html" class="rs-prod-title">Pure Skin Cleanser</a>
+                                <div class="rs-prod-price">Rp 149.000</div>
+                            </div>
+                            <a href="product-preview.html" class="rs-prod-action-btn" aria-label="View Product">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="rs-product-card">
+                        <div class="rs-prod-img-box">
+                            <a href="product-preview.html">
+                                <img src="assets/images/cat_sun_protect.jpg" alt="Velvet Glow Oil Serum">
+                            </a>
+                            <button type="button" class="rs-prod-wishlist" aria-label="Add to wishlist">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                            </button>
+                        </div>
+                        <div class="rs-prod-info">
+                            <div class="rs-prod-meta">
+                                <a href="product-preview.html" class="rs-prod-title">Velvet Glow Oil Serum</a>
+                                <div class="rs-prod-price">Rp 219.000</div>
+                            </div>
+                            <a href="product-preview.html" class="rs-prod-action-btn" aria-label="View Product">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="rs-product-card">
+                        <div class="rs-prod-img-box">
+                            <a href="product-preview.html">
+                                <img src="assets/images/cat_body_care.jpg" alt="Restorative Body Trio">
+                            </a>
+                            <button type="button" class="rs-prod-wishlist" aria-label="Add to wishlist">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                            </button>
+                        </div>
+                        <div class="rs-prod-info">
+                            <div class="rs-prod-meta">
+                                <a href="product-preview.html" class="rs-prod-title">Restorative Body Trio</a>
+                                <div class="rs-prod-price">Rp 189.000</div>
+                            </div>
+                            <a href="product-preview.html" class="rs-prod-action-btn" aria-label="View Product">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product 4 -->
+                    <div class="rs-product-card">
+                        <div class="rs-prod-img-box">
+                            <a href="product-preview.html">
+                                <img src="assets/images/cat_hair_care.jpg" alt="Velvet Glow Hair Oil">
+                            </a>
+                            <button type="button" class="rs-prod-wishlist" aria-label="Add to wishlist">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                            </button>
+                        </div>
+                        <div class="rs-prod-info">
+                            <div class="rs-prod-meta">
+                                <a href="product-preview.html" class="rs-prod-title">Velvet Glow Hair Oil</a>
+                                <div class="rs-prod-price">Rp 199.000</div>
+                            </div>
+                            <a href="product-preview.html" class="rs-prod-action-btn" aria-label="View Product">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product 5 -->
+                    <div class="rs-product-card">
+                        <div class="rs-prod-img-box">
+                            <a href="product-preview.html">
+                                <img src="assets/images/prod_pink_jar.jpg" alt="Skin Protection Cream">
+                            </a>
+                            <button type="button" class="rs-prod-wishlist" aria-label="Add to wishlist">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                            </button>
+                        </div>
+                        <div class="rs-prod-info">
+                            <div class="rs-prod-meta">
+                                <a href="product-preview.html" class="rs-prod-title">Skin Protection Cream</a>
+                                <div class="rs-prod-price">Rp 170.000</div>
+                            </div>
+                            <a href="product-preview.html" class="rs-prod-action-btn" aria-label="View Product">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product 6 -->
+                    <div class="rs-product-card">
+                        <div class="rs-prod-img-box">
+                            <a href="product-preview.html">
+                                <img src="assets/images/prod_pink_foam.jpg" alt="Daily Foaming Cleanser">
+                            </a>
+                            <button type="button" class="rs-prod-wishlist" aria-label="Add to wishlist">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                            </button>
+                        </div>
+                        <div class="rs-prod-info">
+                            <div class="rs-prod-meta">
+                                <a href="product-preview.html" class="rs-prod-title">Daily Foaming Cleanser</a>
+                                <div class="rs-prod-price">Rp 170.000</div>
+                            </div>
+                            <a href="product-preview.html" class="rs-prod-action-btn" aria-label="View Product">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rs-slider-nav">
+                    <button type="button" class="rs-nav-btn rs-nav-prev" onclick="scrollSlider('productSlider', -1)" aria-label="Previous Products">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+                    </button>
+                    <button type="button" class="rs-nav-btn rs-nav-next" onclick="scrollSlider('productSlider', 1)" aria-label="Next Products">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         5. ALTERNATING EDITORIAL BANNERS
+    ============================================= -->
+    <section class="rs-editorial-section">
+        <div class="container">
+            <!-- Row 1: Image Left, Text Right -->
+            <div class="rs-editorial-row rs-row-normal">
+                <div class="rs-editorial-media">
+                    <img src="assets/images/banner_hijab_beauty.jpg" alt="Kecantikan Yang Terukur" class="rs-editorial-img">
+                </div>
+                <div class="rs-editorial-content">
+                    <h2 class="rs-editorial-title">Kecantikan Yang Terukur</h2>
+                    <p class="rs-editorial-desc">
+                        Kami memadukan bahan alami dengan formulasi riset teruji klinis untuk menghasilkan produk perawatan kulit berkualitas tinggi dan tahan lama.
+                    </p>
+                    <a href="#products" class="rs-pill-btn">
+                        Pelajari Lebih Lanjut
+                    </a>
+                </div>
+            </div>
+
+            <!-- Row 2: Text Left, Image Right -->
+            <div class="rs-editorial-row rs-row-reversed">
+                <div class="rs-editorial-content">
+                    <h2 class="rs-editorial-title">Inovasi Perawatan Kulit</h2>
+                    <p class="rs-editorial-desc">
+                        Solusi perawatan kulit terlengkap dengan bahan-bahan yang dirancang khusus untuk kenyamanan, kelembapan, dan kesehatan alami kulit.
+                    </p>
+                    <a href="#products" class="rs-pill-btn">
+                        Temukan Produk Kami
+                    </a>
+                </div>
+                <div class="rs-editorial-media">
+                    <img src="assets/images/banner_hands_skin.jpg" alt="Inovasi Perawatan Kulit" class="rs-editorial-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         6. JOIN TO OUR COMMUNITY
+    ============================================= -->
+    <section id="community" class="rs-community-section">
+        <div class="container">
+            <div class="rs-community-header">
+                <h2 class="rs-section-heading">Join to Our Community</h2>
+                <p class="rs-community-subtitle">Become a part of RajaSkin community and share your radiant journey.</p>
+            </div>
+        </div>
+
+        <div class="rs-community-gallery">
+            <div class="rs-community-item">
+                <img src="assets/images/comm_bathroom_routine.jpg" alt="RajaSkin Community 1">
+            </div>
+            <div class="rs-community-item">
+                <img src="assets/images/comm_towel.jpg" alt="RajaSkin Community 2">
+            </div>
+            <div class="rs-community-item">
+                <img src="assets/images/comm_black_hijab.jpg" alt="RajaSkin Community 3">
+            </div>
+            <div class="rs-community-item">
+                <img src="assets/images/comm_white_hijab.jpg" alt="RajaSkin Community 4">
+            </div>
+            <div class="rs-community-item">
+                <img src="assets/images/comm_applying_cream.jpg" alt="RajaSkin Community 5">
+            </div>
+            <div class="rs-community-item">
+                <img src="assets/images/banner_hijab_beauty.jpg" alt="RajaSkin Community 6">
+            </div>
+            <div class="rs-community-item">
+                <img src="assets/images/comm_turban_hijab.jpg" alt="RajaSkin Community 7">
+            </div>
+        </div>
+    </section>
+
+</div>
+
+</main><!-- #primary -->
+
+<footer id="colophon" class="site-footer rs-site-footer">
+    <div class="container rs-footer-container">
+        <!-- Top Navigation Row -->
+        <div class="rs-footer-top">
+            <nav class="rs-footer-nav" aria-label="Footer Navigation">
+                <ul class="rs-footer-menu">
+                    <li><a href="preview.html">Home</a></li>
+                    <li><a href="catalogue-preview.html">Catalogue</a></li>
+                    <li><a href="about-preview.html">About Us</a></li>
+                </ul>
+            </nav>
+
+            <div class="rs-footer-icons">
+                <a href="#" class="rs-footer-icon-link" aria-label="Facebook">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                </a>
+                <a href="#" class="rs-footer-icon-link" aria-label="Instagram">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                </a>
+                <a href="#" class="rs-footer-icon-link" aria-label="TikTok">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+                </a>
+                <a href="#" class="rs-footer-icon-link" aria-label="X">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l16 16M4 20L20 4"/></svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="rs-footer-watermark-wrap">
+            <h1 class="rs-footer-watermark">RajaSkin</h1>
+        </div>
+    </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Sticky Header Scroll Effect
+    const stickyHeader = document.getElementById('masthead');
+    if (stickyHeader) {
+        const handleHeaderScroll = function() {
+            if (window.pageYOffset > 10) {
+                stickyHeader.classList.add('is-scrolled');
+            } else {
+                stickyHeader.classList.remove('is-scrolled');
+            }
+        };
+        window.addEventListener('scroll', handleHeaderScroll, { passive: true });
+        handleHeaderScroll();
+    }
+
+    const toggleBtn = document.querySelector('.mobile-menu-toggle');
+    const overlay = document.querySelector('.mobile-menu-overlay');
+    const body = document.body;
+
+    function toggleMenu() {
+        body.classList.toggle('mobile-menu-active');
+    }
+
+    if (toggleBtn) toggleBtn.addEventListener('click', toggleMenu);
+    if (overlay) overlay.addEventListener('click', toggleMenu);
+
+    // Profile / Account Dropdown Toggle
+    const accountWrap = document.getElementById('rsAccountDropdownWrap');
+    const accountTrigger = document.getElementById('rsAccountTrigger');
+
+    if (accountTrigger && accountWrap) {
+        accountTrigger.addEventListener('click', function(e) {
+            e.stopPropagation();
+            accountWrap.classList.toggle('active');
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!accountWrap.contains(e.target)) {
+                accountWrap.classList.remove('active');
+            }
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                accountWrap.classList.remove('active');
+            }
+        });
+    }
+});
+
+function scrollSlider(id, direction) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    var card = el.querySelector(':first-child');
+    var cardWidth = card ? card.offsetWidth + 24 : 300;
+    el.scrollBy({
+        left: direction * cardWidth,
+        behavior: 'smooth'
+    });
+}
+</script>
+
+</body>
+</html>

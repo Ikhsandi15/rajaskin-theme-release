@@ -1,0 +1,598 @@
+/*
+Theme Name: RajaSkin - Luxury Skincare & Beauty WooCommerce Theme
+Author: RajaOngkir.com
+Author URI: https://rajaongkir.com
+Description: RajaSkin is a high-converting, luxury beauty and skincare e-commerce theme for WordPress & WooCommerce. Engineered with a refined modern editorial aesthetic, Playfair Display & Inter typography, responsive symmetrical arch galleries, seamless product sliders, 100% customizable copywriting with instant Live Preview, and a friction-free multi-step checkout experience.
+Version: 1.1.1
+Requires at least: 6.0
+Tested up to: 6.7
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: rajaskin-wp-theme
+Tags: e-commerce, woocommerce, beauty, skincare, cosmetics, custom-colors, custom-logo, custom-header, featured-images, full-width-template, theme-options, translation-ready
+*/
+
+/* --- Root Variables (RajaSkin Palette) --- */
+:root {
+    --color-primary: #1a1a1a;
+    --color-dark: #121212;
+    --color-text: #222222;
+    --color-text-muted: #767676;
+    --color-cream: #faf9f6;
+    --color-card-bg: #f4f3ee;
+    --color-card-light: #ffffff;
+    --color-border: #eae8e1;
+    --color-border-light: #f0eee8;
+    --color-white: #ffffff;
+    --color-accent: #d4622b;
+    --color-accent-hover: #ba511e;
+    --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    background-color: #ffffff;
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+a { 
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+/* --- Layout --- */
+.container { 
+    max-width: 100%; 
+    margin: 0 auto; 
+    padding: 0 24px; 
+    width: 100%; 
+}
+
+.site-main { 
+    padding: 0; 
+}
+
+/* ==========================================================================
+   Header (RajaSkin Clean Luxury Navbar)
+   ========================================================================== */
+.site-header,
+.rajaskin-header,
+.sticky-header {
+    background: #ffffff;
+    border-bottom: 1px solid #f2f2f2;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 995;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+/* Scrolled elevation & glassmorphism */
+.site-header.is-scrolled,
+.rajaskin-header.is-scrolled,
+.sticky-header.is-scrolled {
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border-bottom-color: rgba(0, 0, 0, 0.05);
+}
+
+/* WordPress Admin Bar Compatibility */
+.admin-bar .site-header,
+.admin-bar .rajaskin-header,
+.admin-bar .sticky-header {
+    top: 32px;
+}
+
+@media screen and (max-width: 782px) {
+    .admin-bar .site-header,
+    .admin-bar .rajaskin-header,
+    .admin-bar .sticky-header {
+        top: 46px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .admin-bar .site-header,
+    .admin-bar .rajaskin-header,
+    .admin-bar .sticky-header {
+        top: 0;
+    }
+}
+
+.header-grid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.1rem 24px;
+    position: relative;
+}
+
+/* Left: Main Navigation */
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+}
+
+.header-menu {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.header-menu li {
+    display: inline-flex;
+}
+
+.header-menu li a {
+    text-decoration: none;
+    color: #222222;
+    font-weight: 500;
+    font-size: 0.9rem;
+    letter-spacing: 0.2px;
+    transition: color 0.2s ease;
+}
+
+.header-menu li a:hover,
+.header-menu li.current-menu-item a,
+.header-menu li a.active {
+    color: #888888;
+}
+
+/* Center: Brand Name */
+.header-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    text-align: center;
+}
+
+.site-logo-text {
+    font-family: var(--font-serif);
+    font-weight: 700;
+    font-size: 1.75rem;
+    color: #111111;
+    text-decoration: none;
+    letter-spacing: -0.5px;
+    display: inline-block;
+}
+
+.site-logo-link,
+.custom-logo-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.custom-logo,
+.site-logo-img {
+    max-height: 40px;
+    width: auto;
+    max-width: 220px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+/* Right: Icons */
+.header-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1.35rem;
+    flex: 1;
+}
+
+.header-icon-link {
+    text-decoration: none;
+    color: #222222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s, color 0.2s;
+}
+
+.header-icon-link:hover {
+    color: #777777;
+    transform: translateY(-1px);
+}
+
+.cart-link {
+    position: relative;
+}
+
+.cart-count-badge {
+    position: absolute;
+    top: -6px;
+    right: -8px;
+    background: #111111;
+    color: #ffffff;
+    font-size: 0.65rem;
+    font-weight: 700;
+    min-width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    padding: 0 4px;
+    transition: transform 0.2s ease;
+    z-index: 2;
+}
+
+@keyframes badgePop {
+    0% { transform: scale(0.6); }
+    50% { transform: scale(1.35); }
+    100% { transform: scale(1); }
+}
+
+.cart-count-badge.pulse-badge {
+    animation: badgePop 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.cart-count-badge:empty {
+    display: none;
+}
+
+/* ==========================================================================
+   Profile / Account Dropdown Menu
+   ========================================================================== */
+.rs-account-dropdown-wrap {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+.rs-account-trigger {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: #222222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s, color 0.2s;
+}
+
+.rs-account-trigger:hover,
+.rs-account-dropdown-wrap.active .rs-account-trigger {
+    color: #777777;
+    transform: translateY(-1px);
+}
+
+.rs-account-dropdown {
+    position: absolute;
+    top: calc(100% + 14px);
+    right: 0;
+    width: 230px;
+    background: #ffffff;
+    border: 1px solid #ededed;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.02);
+    padding: 8px;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8px);
+    transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+    box-sizing: border-box;
+}
+
+.rs-account-dropdown-wrap.active .rs-account-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.rs-dropdown-user-header {
+    padding: 8px 10px 10px;
+    text-align: left;
+}
+
+.rs-dropdown-greeting {
+    display: block;
+    font-size: 0.725rem;
+    color: #888888;
+    margin-bottom: 2px;
+}
+
+.rs-dropdown-username {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #111111;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.rs-dropdown-login-btn {
+    display: block;
+    background: #111111;
+    color: #ffffff !important;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 7px 12px;
+    border-radius: 999px;
+    margin-top: 6px;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.rs-dropdown-login-btn:hover {
+    background: #333333;
+}
+
+.rs-dropdown-divider {
+    height: 1px;
+    background: #f0f0f0;
+    margin: 4px 4px 6px;
+}
+
+.rs-dropdown-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.rs-dropdown-item {
+    margin: 0;
+    padding: 0;
+}
+
+.rs-dropdown-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 12px;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    color: #333333;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.15s ease, color 0.15s ease;
+}
+
+.rs-dropdown-link svg {
+    color: #666666;
+    flex-shrink: 0;
+    transition: color 0.15s;
+}
+
+.rs-dropdown-link:hover {
+    background: #f7f7f8;
+    color: #111111;
+}
+
+.rs-dropdown-link:hover svg {
+    color: #111111;
+}
+
+.rs-dropdown-link.logout-link {
+    color: #dc2626;
+}
+
+.rs-dropdown-link.logout-link svg {
+    color: #dc2626;
+}
+
+.rs-dropdown-link.logout-link:hover {
+    background: #fef2f2;
+    color: #b91c1c;
+}
+
+/* Mobile Drawer Menu */
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #111111;
+    padding: 4px;
+    cursor: pointer;
+}
+
+.mobile-menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 998;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+@media (max-width: 900px) {
+    .mobile-menu-toggle {
+        display: block;
+    }
+
+    .main-navigation {
+        display: none;
+    }
+
+    body.mobile-menu-active .main-navigation {
+        display: flex !important;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 280px;
+        height: 100vh;
+        background: #ffffff;
+        z-index: 999;
+        flex-direction: column;
+        padding: 3rem 2rem;
+        box-shadow: 5px 0 20px rgba(0,0,0,0.1);
+    }
+
+    body.mobile-menu-active .header-menu {
+        flex-direction: column;
+        gap: 1.25rem;
+    }
+
+    body.mobile-menu-active .header-menu li a {
+        font-size: 1.1rem;
+        padding: 0.5rem 0;
+    }
+
+    body.mobile-menu-active {
+        overflow: hidden;
+    }
+
+    body.mobile-menu-active .mobile-menu-overlay {
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
+
+/* ==========================================================================
+   Global RajaSkin Footer (Unified across all pages)
+   ========================================================================== */
+.rs-site-footer {
+    background: #ffffff;
+    padding: 5rem 0 0;
+    overflow: hidden;
+    position: relative;
+    border-top: none;
+}
+
+.rs-footer-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.rs-footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 2.5rem;
+}
+
+.rs-footer-menu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 2.75rem;
+}
+
+.rs-footer-menu li a {
+    text-decoration: none;
+    color: #111111;
+    font-size: 1.05rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.rs-footer-menu li a:hover {
+    color: #777777;
+}
+
+.rs-footer-icons {
+    display: flex;
+    gap: 1.75rem;
+    align-items: center;
+}
+
+.rs-footer-icon-link {
+    color: #111111;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.rs-footer-icon-link:hover {
+    color: #777777;
+    transform: translateY(-1px);
+}
+
+.rs-footer-watermark-wrap {
+    overflow: hidden;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 1.5rem 0 0;
+    user-select: none;
+    pointer-events: none;
+}
+
+.rs-footer-watermark {
+    font-family: var(--font-serif);
+    font-size: 22.8vw;
+    font-weight: 400;
+    color: #e5e2da;
+    margin: 0;
+    line-height: 0.72;
+    text-align: center;
+    letter-spacing: -0.035em;
+    width: 100vw;
+    white-space: nowrap;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .rs-site-footer {
+        padding-top: 3.5rem;
+    }
+
+    .rs-footer-top {
+        flex-direction: column;
+        gap: 1.75rem;
+        text-align: center;
+    }
+
+    .rs-footer-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.75rem;
+    }
+
+    .rs-footer-watermark {
+        font-size: 22.8vw;
+        letter-spacing: -0.035em;
+    }
+}
+
+/* ==========================================================================
+   Prevent Horizontal Overflow (Select2 fixes for Checkout & Cart)
+   Note: Do not use overflow-x: hidden on html/body as it breaks CSS position: sticky!
+   ========================================================================== */
+html {
+    max-width: 100%;
+}
+
+body {
+    max-width: 100%;
+    overflow-x: clip;
+}
+
+.woocommerce-checkout .select2-container,
+#cart-destination-field .select2-container {
+    max-width: 100% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
